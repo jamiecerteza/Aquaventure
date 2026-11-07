@@ -19,6 +19,28 @@ html {
     --text-muted: #94a3b8;
     --border-color: rgba(255, 255, 255, 0.08);
     --transition: all 0.3s ease;
+
+    --gym-bg: #0D1B2A;
+    --gym-panel: linear-gradient(180deg, rgba(26, 54, 82, 0.6) 0%, rgba(13, 27, 42, 0.8) 100%);
+    --gym-blue: #00B4D8;
+    --gym-blue-light: #89c2d9;
+    --gym-blue-dark: #468faf;
+    --gym-white: #ffffff;
+    --gym-muted: #b7c6d4;
+    --gym-line: rgba(183, 214, 232, .13);
+    --gym-radius: 20px;
+
+    --bg: #0D1B2A;
+    --deep: #0D1B2A;
+    --panel: linear-gradient(180deg, rgba(26, 54, 82, 0.6) 0%, rgba(13, 27, 42, 0.8) 100%);
+    --line: rgba(137, 194, 217, .24);
+    --line-strong: rgba(0, 180, 216, .55);
+    --text: #FFFFFF;
+    --muted: #D0D8E0;
+    --cyan: #00B4D8;
+    --button-gradient: linear-gradient(90deg, #89c2d9, #468faf);
+    --white: #FFFFFF;
+    --max: 1600px
 }
 
 body {
@@ -361,8 +383,8 @@ section {
     color: var(--text-muted);
 }
 
-/* Landing - Locations */
-.Landing-Locations-Grid {
+/* Landing - Services */
+.Landing-Services-Grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2rem;
@@ -370,7 +392,7 @@ section {
 
 }
 
-.Landing-Locations-Card {
+.Landing-Services-Card {
     background-color: var(--bg-secondary);
     border: 1px solid var(--border-color);
     border-radius: 16px;
@@ -381,13 +403,13 @@ section {
     justify-content: space-between;
 }
 
-.Landing-Locations-Card:hover {
+.Landing-Services-Card:hover {
     transform: translateY(-5px);
     border-color: var(--accent-blue);
     box-shadow: 0 10px 30px rgba(59, 130, 246, 0.15);
 }
 
-.Landing-Locations-Badge {
+.Landing-Services-Badge {
     display: inline-block;
     font-size: 0.75rem;
     background: rgba(59, 130, 246, 0.15);
@@ -398,19 +420,19 @@ section {
     margin-bottom: 1rem;
 }
 
-.Landing-Locations-Title {
+.Landing-Services-Title {
     font-size: 1.25rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
 }
 
-.Landing-Locations-Text {
+.Landing-Services-Text {
     color: var(--text-muted);
     font-size: 0.9rem;
     margin-bottom: 1.5rem;
 }
 
-.Landing-Locations-Link {
+.Landing-Services-Link {
     color: var(--accent-cyan);
     font-weight: 600;
     font-size: 0.9rem;
@@ -420,12 +442,11 @@ section {
     transition: var(--transition);
 }
 
-.Landing-Locations-Link:hover {
+.Landing-Services-Link:hover {
     gap: 0.75rem;
 }
 
 /* Landing - Plans */
-
 .Landing-Plans {
     display: flex;
     flex-direction: column;
@@ -1271,56 +1292,43 @@ section {
 }
 
 /* Sanji */
-/* Aquaventure Angono Gym */
+/* Aquaventure gym Gym */
 
-
-:root {
-    --angono-bg: #0D1B2A;
-    --angono-panel: linear-gradient(180deg, rgba(26, 54, 82, 0.6) 0%, rgba(13, 27, 42, 0.8) 100%);
-    --angono-blue: #00B4D8;
-    --angono-blue-light: #89c2d9;
-    --angono-blue-dark: #468faf;
-    --angono-white: #ffffff;
-    --angono-muted: #b7c6d4;
-    --angono-line: rgba(183, 214, 232, .13);
-    --angono-radius: 20px;
-}
-
-.angono-page {
+.gym-page {
     display: none;
 }
 
-.ll2:checked~.angono-page {
+.ll2:checked~.gym-page {
     display: block;
 }
 
-body.angono-page {
+body.gym-page {
     margin: 0;
-    background: var(--angono-bg);
-    color: var(--angono-white);
+    background: var(--gym-bg);
+    color: var(--gym-white);
     font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
     font-size: 16px;
     line-height: 1.6;
 
 }
 
-.angono-page a {
+.gym-page a {
     color: inherit;
     text-decoration: none;
 }
 
-.angono-page button,
-.angono-page a {
+.gym-page button,
+.gym-page a {
     -webkit-tap-highlight-color: transparent;
 }
 
-.angono-page main {
+.gym-page main {
     overflow: hidden;
 }
 
 /* HERO / INTRODUCTION */
 
-.angono-hero {
+.gym-hero {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
@@ -1332,7 +1340,7 @@ body.angono-page {
     max-width: 96%;
 }
 
-.angono-hero-copy {
+.gym-hero-copy {
     max-width: 570px;
 }
 
@@ -1341,51 +1349,51 @@ body.angono-page {
     gap: 30px;
 }
 
-.angono-eyebrow {
+.gym-eyebrow {
     display: inline-flex;
     align-items: center;
     gap: 9px;
-    color: var(--angono-blue);
+    color: var(--gym-blue);
     font-size: 11px;
     letter-spacing: .16em;
     font-weight: 800;
 }
 
-.angono-status-dot {
+.gym-status-dot {
     width: 7px;
     height: 7px;
     border-radius: 50%;
-    background: var(--angono-blue);
+    background: var(--gym-blue);
     display: inline-block;
     box-shadow: 0 0 10px rgba(0, 180, 216, .65);
 }
 
-.angono-page h1,
-.angono-page h2,
-.angono-page h3,
-.angono-page p {
+.gym-page h1,
+.gym-page h2,
+.gym-page h3,
+.gym-page p {
     margin-top: 0;
 }
 
-.angono-page h1 {
+.gym-page h1 {
     font-size: clamp(42px, 5vw, 68px);
     line-height: 1.08;
     letter-spacing: -.045em;
     margin: 22px 0;
 }
 
-.angono-page h1 span {
-    color: var(--angono-blue);
+.gym-page h1 span {
+    color: var(--gym-blue);
 }
 
-.angono-hero-copy>p {
-    color: var(--angono-muted);
+.gym-hero-copy>p {
+    color: var(--gym-muted);
     font-size: 16px;
     max-width: 500px;
     line-height: 1.8;
 }
 
-.angono-hero-actions {
+.gym-hero-actions {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -1393,7 +1401,7 @@ body.angono-page {
     margin-top: 28px;
 }
 
-.angono-button {
+.gym-button {
     min-height: 44px;
     display: inline-flex;
     justify-content: center;
@@ -1406,71 +1414,71 @@ body.angono-page {
     transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
 }
 
-.angono-button:hover {
+.gym-button:hover {
     transform: translateY(-2px);
     box-shadow: 0 0 12px rgba(41, 199, 255, .5);
 }
 
-.angono-button-primary {
+.gym-button-primary {
     color: #ffffff;
     background-color: #00b4d8;
 }
 
-.angono-button-primary span,
-.angono-button-outline span {
+.gym-button-primary span,
+.gym-button-outline span {
     font-size: 17px;
 }
 
-.angono-button-quiet {
-    color: var(--angono-muted);
-    border: 1px solid var(--angono-line);
+.gym-button-quiet {
+    color: var(--gym-muted);
+    border: 1px solid var(--gym-line);
 }
 
 
 
-.angono-button-outline {
+.gym-button-outline {
     border: 1px solid rgba(0, 180, 216, .6);
-    color: var(--angono-blue);
+    color: var(--gym-blue);
     background: rgba(0, 180, 216, .06);
 }
 
-.angono-hero-note {
+.gym-hero-note {
     display: flex;
     gap: 12px;
     align-items: center;
     margin-top: 22px;
 }
 
-.angono-note-icon {
+.gym-note-icon {
     width: 36px;
     height: 36px;
     border: 1px solid rgba(0, 180, 216, .3);
-    color: var(--angono-blue);
+    color: var(--gym-blue);
     display: grid;
     place-items: center;
     border-radius: 10px;
 }
 
-.angono-hero-note strong,
-.angono-hero-note small {
+.gym-hero-note strong,
+.gym-hero-note small {
     display: block;
 }
 
-.angono-hero-note strong {
+.gym-hero-note strong {
     font-size: 13px;
 }
 
-.angono-hero-note small {
+.gym-hero-note small {
     font-size: 11px;
-    color: var(--angono-muted);
+    color: var(--gym-muted);
 }
 
-.angono-hero-visual {
+.gym-hero-visual {
     min-height: 390px;
     position: relative;
 }
 
-.angono-hero-photo {
+.gym-hero-photo {
     position: absolute;
     inset: 0 8% 5% 4%;
     border-radius: 28px;
@@ -1479,7 +1487,7 @@ body.angono-page {
     box-shadow: 0 25px 70px rgba(0, 0, 0, .3);
 }
 
-.angono-visual-glow {
+.gym-visual-glow {
     position: absolute;
     width: 220px;
     height: 220px;
@@ -1490,7 +1498,7 @@ body.angono-page {
     filter: blur(65px);
 }
 
-.angono-photo-tag {
+.gym-photo-tag {
     position: absolute;
     left: 8%;
     top: 22px;
@@ -1500,12 +1508,12 @@ body.angono-page {
     padding: 9px 12px;
     border-radius: 8px;
     background: rgba(9, 26, 41, .82);
-    border: 1px solid var(--angono-line);
+    border: 1px solid var(--gym-line);
     font-size: 9px;
     letter-spacing: .12em;
 }
 
-.angono-floating-card {
+.gym-floating-card {
     position: absolute;
     right: 0;
     bottom: 0;
@@ -1519,28 +1527,28 @@ body.angono-page {
     box-shadow: 0 16px 45px rgba(0, 0, 0, .25);
 }
 
-.angono-float-icon {
+.gym-float-icon {
     width: 35px;
     height: 35px;
     border-radius: 10px;
     background: rgba(0, 180, 216, .14);
-    color: var(--angono-blue);
+    color: var(--gym-blue);
     display: grid;
     place-items: center;
     font-size: 20px;
 }
 
-.angono-floating-card strong,
-.angono-floating-card small {
+.gym-floating-card strong,
+.gym-floating-card small {
     display: block;
 }
 
-.angono-floating-card strong {
+.gym-floating-card strong {
     font-size: 12px;
 }
 
-.angono-floating-card small {
-    color: var(--angono-muted);
+.gym-floating-card small {
+    color: var(--gym-muted);
     font-size: 10px;
     margin-top: 3px;
 }
@@ -1548,118 +1556,118 @@ body.angono-page {
 
 /* QUICK FACTS / BRANCH HIGHLIGHTS */
 
-.angono-quick-facts {
+.gym-quick-facts {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     padding: 24px clamp(20px, 8vw, 120px);
     gap: 18px;
     background: rgba(20, 43, 64, .64);
-    border-top: 1px solid var(--angono-line);
-    border-bottom: 1px solid var(--angono-line);
+    border-top: 1px solid var(--gym-line);
+    border-bottom: 1px solid var(--gym-line);
     width: 1600px;
     max-width: 100%;
     margin-top: 30px;
 }
 
-.angono-quick-facts>div {
+.gym-quick-facts>div {
     display: flex;
     align-items: center;
     gap: 13px;
     padding: 4px 8px;
 }
 
-.angono-fact-icon {
+.gym-fact-icon {
     width: 42px;
     height: 42px;
     display: grid;
     place-items: center;
     border-radius: 12px;
-    color: var(--angono-blue);
+    color: var(--gym-blue);
     background: rgba(0, 180, 216, .1);
     font-size: 21px;
 }
 
-.angono-quick-facts strong,
-.angono-quick-facts small {
+.gym-quick-facts strong,
+.gym-quick-facts small {
     display: block;
 }
 
-.angono-quick-facts strong {
+.gym-quick-facts strong {
     font-size: 13px;
 }
 
-.angono-quick-facts small {
+.gym-quick-facts small {
     font-size: 11px;
-    color: var(--angono-muted);
+    color: var(--gym-muted);
     margin-top: 2px;
 }
 
 /* GENERAL CONTENT SECTIONS */
 
-.angono-section {
+.gym-section {
     padding: 84px clamp(20px, 8vw, 120px);
 }
 
-.angono-section-ov {
+.gym-section-ov {
     padding: 84px clamp(20px, 8vw, 120px) 42px;
 }
 
-.angono-section-heading {
+.gym-section-heading {
     display: flex;
     flex-direction: column;
     margin-bottom: 30px;
 }
 
-.angono-page h2 {
+.gym-page h2 {
     font-size: 34px;
     letter-spacing: -.035em;
     line-height: 1.2;
     margin: 12px 0 0;
 }
 
-.angono-section-intro {
+.gym-section-intro {
     max-width: 1200px;
-    color: var(--angono-muted);
+    color: var(--gym-muted);
     font-size: 14px;
     line-height: 1.8;
     margin-bottom: 2px;
 }
 
-.angono-feature-grid {
+.gym-feature-grid {
     display: grid;
     grid-template-columns: 1fr 1fr .9fr;
     gap: 16px;
 }
 
-.angono-feature-card {
+.gym-feature-card {
     min-height: 340px;
-    border: 1px solid var(--angono-line);
-    border-radius: var(--angono-radius);
+    border: 1px solid var(--gym-line);
+    border-radius: var(--gym-radius);
     overflow: hidden;
     position: relative;
-    background: var(--angono-panel);
+    background: var(--gym-panel);
 }
 
-.angono-feature-image {
+.gym-feature-image {
     background-position: center;
     background-size: cover;
 }
 
-.angono-equipment {
+.gym-equipment {
     background-image: url("https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=900&q=80");
 }
 
-.angono-locker {
+.gym-locker {
     background-image: url("https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=900&q=80");
 }
 
-.angono-feature-shade {
+.gym-feature-shade {
     position: absolute;
     inset: 0;
     background: linear-gradient(180deg, rgba(8, 22, 35, .05) 10%, rgba(8, 22, 35, .95) 100%);
 }
 
-.angono-card-index {
+.gym-card-index {
     position: absolute;
     top: 20px;
     left: 20px;
@@ -1671,228 +1679,228 @@ body.angono-page {
     border-radius: 6px;
 }
 
-.angono-feature-content {
+.gym-feature-content {
     position: absolute;
     left: 22px;
     right: 22px;
     bottom: 22px;
 }
 
-.angono-feature-content h3,
-.angono-benefit-card h3 {
+.gym-feature-content h3,
+.gym-benefit-card h3 {
     font-size: 21px;
     margin-bottom: 9px;
     line-height: 1.25;
 }
 
-.angono-feature-content p,
-.angono-benefit-card p {
-    color: var(--angono-muted);
+.gym-feature-content p,
+.gym-benefit-card p {
+    color: var(--gym-muted);
     font-size: 12px;
     line-height: 1.7;
 }
 
-.angono-text-link {
+.gym-text-link {
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    color: var(--angono-blue);
+    color: var(--gym-blue);
     font-size: 12px;
     font-weight: 700;
 }
 
-.angono-text-link span {
+.gym-text-link span {
     font-size: 16px;
 }
 
-.angono-benefit-card {
+.gym-benefit-card {
     padding: 25px 23px;
 }
 
-.angono-benefit-card h3 {
+.gym-benefit-card h3 {
     margin-top: 14px;
 }
 
-.angono-check-list {
+.gym-check-list {
     list-style: none;
     padding: 0;
     margin: 18px 0 20px;
 }
 
-.angono-check-list li {
+.gym-check-list li {
     display: flex;
     gap: 9px;
-    color: var(--angono-muted);
+    color: var(--gym-muted);
     font-size: 12px;
     margin: 10px 0;
 }
 
-.angono-check-list li span {
-    color: var(--angono-blue);
+.gym-check-list li span {
+    color: var(--gym-blue);
     font-weight: 800;
 }
 
 /* MEMBERSHIP RATES */
 
-.angono-rates-section {
+.gym-rates-section {
     background: linear-gradient(180deg, rgba(18, 42, 63, .45), rgba(13, 27, 42, 0));
     max-width: 1600px;
 }
 
-.angono-rate-layout {
+.gym-rate-layout {
     display: grid;
     grid-template-columns: .9fr .9fr 1.2fr;
     gap: 16px;
     align-items: stretch;
 }
 
-.angono-rate-card {
-    border: 1px solid var(--angono-line);
-    background: var(--angono-panel);
-    border-radius: var(--angono-radius);
+.gym-rate-card {
+    border: 1px solid var(--gym-line);
+    background: var(--gym-panel);
+    border-radius: var(--gym-radius);
     padding: 26px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.angono-rate-label {
+.gym-rate-label {
     font-size: 10px;
     letter-spacing: .15em;
-    color: var(--angono-blue);
+    color: var(--gym-blue);
     font-weight: 800;
 }
 
-.angono-rate-card h3 {
+.gym-rate-card h3 {
     font-size: 21px;
     margin: 9px 0 20px;
 }
 
-.angono-session-price {
+.gym-session-price {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
 }
 
-.angono-session-price>div {
+.gym-session-price>div {
     background: rgba(0, 180, 216, .07);
     border: 1px solid rgba(0, 180, 216, .16);
     padding: 15px 12px;
     border-radius: 12px;
 }
 
-.angono-session-price strong,
-.angono-session-price small {
+.gym-session-price strong,
+.gym-session-price small {
     display: block;
 }
 
-.angono-session-price strong {
+.gym-session-price strong {
     font-size: 27px;
-    color: var(--angono-white);
+    color: var(--gym-white);
 }
 
-.angono-session-price small {
+.gym-session-price small {
     font-size: 11px;
-    color: var(--angono-muted);
+    color: var(--gym-muted);
 }
 
-.angono-rate-card>p {
-    color: var(--angono-muted);
+.gym-rate-card>p {
+    color: var(--gym-muted);
     font-size: 13px;
     margin: 20px 0;
 }
 
-.angono-rate-card .angono-button {
+.gym-rate-card .gym-button {
     width: 100%;
     font-size: 12px;
 }
 
-.angono-price {
+.gym-price {
     font-size: 37px;
     font-weight: 800;
     letter-spacing: -.04em;
 }
 
-.angono-price small {
+.gym-price small {
     font-size: 12px;
-    color: var(--angono-muted);
+    color: var(--gym-muted);
     font-weight: 400;
     letter-spacing: 0;
 }
 
-.angono-plans-card {
+.gym-plans-card {
     border-color: rgba(0, 180, 216, .34);
     box-shadow: 0 14px 50px rgba(0, 0, 0, .12);
 }
 
-.angono-plans-card h3 {
+.gym-plans-card h3 {
     margin-bottom: 14px;
 }
 
-.angono-plan-row {
+.gym-plan-row {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px 0;
-    border-bottom: 1px solid var(--angono-line);
+    border-bottom: 1px solid var(--gym-line);
 }
 
-.angono-plan-row span,
-.angono-plan-row strong,
-.angono-plan-row small {
+.gym-plan-row span,
+.gym-plan-row strong,
+.gym-plan-row small {
     display: block;
 }
 
-.angono-plan-row strong {
+.gym-plan-row strong {
     font-size: 13px;
 }
 
-.angono-plan-row small {
-    color: var(--angono-muted);
+.gym-plan-row small {
+    color: var(--gym-muted);
     font-size: 11px;
 }
 
-.angono-plan-row b {
-    color: var(--angono-blue);
+.gym-plan-row b {
+    color: var(--gym-blue);
     font-size: 15px;
 }
 
-.angono-membership-fee {
+.gym-membership-fee {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 14px 0 18px;
     font-size: 12px;
-    color: var(--angono-muted);
+    color: var(--gym-muted);
 }
 
-.angono-membership-fee strong {
-    color: var(--angono-white);
+.gym-membership-fee strong {
+    color: var(--gym-white);
     font-size: 15px;
 }
 
-.angono-full-button {
+.gym-full-button {
     width: 100%;
 }
 
-.angono-fine-print {
+.gym-fine-print {
     color: #91a7b9;
     font-size: 11px;
     margin: 16px 0 0;
 }
 
-.angono-coach-section {
+.gym-coach-section {
     display: grid;
     grid-template-columns: .8fr 1.2fr;
     align-items: center;
     gap: clamp(35px, 8vw, 110px);
     padding: 70px clamp(20px, 12vw, 170px);
     background: rgba(19, 44, 66, .55);
-    border-top: 1px solid var(--angono-line);
-    border-bottom: 1px solid var(--angono-line);
+    border-top: 1px solid var(--gym-line);
+    border-bottom: 1px solid var(--gym-line);
 }
 
-.angono-coach-art {
+.gym-coach-art {
     min-height: 270px;
     display: grid;
     place-items: center;
@@ -1902,7 +1910,7 @@ body.angono-page {
     background: radial-gradient(circle, rgba(0, 180, 216, .2), rgba(0, 180, 216, .02) 55%, transparent 70%);
 }
 
-.angono-coach-ring {
+.gym-coach-ring {
     width: 190px;
     height: 190px;
     border: 1px solid rgba(0, 180, 216, .5);
@@ -1910,44 +1918,44 @@ body.angono-page {
     box-shadow: 0 0 0 24px rgba(0, 180, 216, .035), 0 0 0 48px rgba(0, 180, 216, .025), inset 0 0 45px rgba(0, 180, 216, .12);
 }
 
-.angono-coach-symbol {
+.gym-coach-symbol {
     position: absolute;
-    color: var(--angono-blue);
+    color: var(--gym-blue);
     font-size: 76px;
     text-shadow: 0 0 30px rgba(0, 180, 216, .45);
 }
 
-.angono-coach-copy h2 {
+.gym-coach-copy h2 {
     max-width: 600px;
     margin: 13px 0 18px;
 }
 
-.angono-coach-copy p {
-    color: var(--angono-muted);
+.gym-coach-copy p {
+    color: var(--gym-muted);
     font-size: 14px;
     line-height: 1.85;
     max-width: 620px;
 }
 
-.angono-location-section{
+.gym-location-section{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.angono-location-card {
+.gym-location-card {
     display: grid;
     grid-template-columns: 1fr 1fr;
     overflow: hidden;
-    border: 1px solid var(--angono-line);
-    border-radius: var(--angono-radius);
-    background: var(--angono-panel);
+    border: 1px solid var(--gym-line);
+    border-radius: var(--gym-radius);
+    background: var(--gym-panel);
     max-width: 95%;
     width: 1050px;
 }
 
-.angono-map-panel {
+.gym-map-panel {
     min-height: 290px;
     position: relative;
     overflow: hidden;
@@ -1956,7 +1964,7 @@ body.angono-page {
     background-size: 30px 30px;
 }
 
-.angono-map-grid {
+.gym-map-grid {
     position: absolute;
     inset: 0;
     opacity: .55;
@@ -2007,7 +2015,7 @@ body.angono-page {
     font-size: 20px;
 }
 
-.angono-map-pin {
+.gym-map-pin {
     position: absolute;
     left: 50%;
     top: 45%;
@@ -2018,44 +2026,44 @@ body.angono-page {
     transform: translate(-50%, -50%) rotate(-45deg);
     display: grid;
     place-items: center;
-    background: var(--angono-blue);
+    background: var(--gym-blue);
     color: #0D1B2A;
     font-size: 12px;
     box-shadow: 0 0 0 12px rgba(0, 180, 216, .12), 0 0 30px rgba(0, 180, 216, .35);
 }
 
-.angono-map-caption {
+.gym-map-caption {
     position: absolute;
     bottom: 22px;
     left: 22px;
     font-size: 10px;
     letter-spacing: .16em;
-    color: var(--angono-blue);
+    color: var(--gym-blue);
 }
 
-.angono-location-info {
+.gym-location-info {
     padding: clamp(25px, 4vw, 48px);
     align-self: center;
 }
 
-.angono-location-info h3 {
+.gym-location-info h3 {
     font-size: 26px;
     margin: 12px 0 5px;
 }
 
-.angono-location-info p {
-    color: var(--angono-muted);
+.gym-location-info p {
+    color: var(--gym-muted);
     font-size: 14px;
     margin-bottom: 12px;
 }
 
-.angono-location-info .angono-muted {
+.gym-location-info .gym-muted {
     font-size: 12px;
     line-height: 1.8;
     margin: 18px 0 23px;
 }
 
-.angono-location-actions {
+.gym-location-actions {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -2063,39 +2071,39 @@ body.angono-page {
     margin-top: 20px;
 }
 
-.angono-location-actions .angono-button {
+.gym-location-actions .gym-button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 9px;
 }
 
-.angono-location-actions .angono-button i {
+.gym-location-actions .gym-button i {
     font-size: 13px;
 }
 
 @media (max-width: 640px) {
-    .angono-location-actions {
+    .gym-location-actions {
         align-items: stretch;
         flex-direction: column;
     }
 
-    .angono-location-actions .angono-button {
+    .gym-location-actions .gym-button {
         width: 100%;
     }
 }
 
-.angono-faq-section .angono-faq-list {
+.gym-faq-section .gym-faq-list {
     max-width: 100%;
     border-top: 1px solid rgba(183, 214, 232, 0.13);
 }
 
-.angono-faq-section details {
+.gym-faq-section details {
     border-bottom: 1px solid rgba(183, 214, 232, 0.13);
     padding: 0 4px;
 }
 
-.angono-faq-section summary {
+.gym-faq-section summary {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -2109,26 +2117,26 @@ body.angono-page {
     transition: color 0.2s ease;
 }
 
-.angono-faq-section summary::-webkit-details-marker {
+.gym-faq-section summary::-webkit-details-marker {
     display: none;
 }
 
-.angono-faq-section summary:hover {
+.gym-faq-section summary:hover {
     color: #00b4d8;
 }
 
-.angono-faq-section summary span {
+.gym-faq-section summary span {
     color: #00b4d8;
     font-size: 20px;
     line-height: 1;
     transition: transform 0.2s ease;
 }
 
-.angono-faq-section details[open] summary span {
+.gym-faq-section details[open] summary span {
     transform: rotate(45deg);
 }
 
-.angono-faq-section details p {
+.gym-faq-section details p {
     max-width: 850px;
     margin: -3px 0 20px;
     color: #b7c6d4;
@@ -2137,32 +2145,32 @@ body.angono-page {
 }
 
 @media (max-width: 640px) {
-    .angono-faq-section {
+    .gym-faq-section {
         padding-top: 48px;
         padding-bottom: 48px;
     }
 
-    .angono-faq-section summary {
+    .gym-faq-section summary {
         padding: 17px 0;
         font-size: 13px;
     }
 
-    .angono-faq-section details p {
+    .gym-faq-section details p {
         font-size: 15px;
     }
 }
 
-.angono-page details {
-    border-bottom: 1px solid var(--angono-line);
+.gym-page details {
+    border-bottom: 1px solid var(--gym-line);
     padding: 0 4px;
 }
 
-.angono-faq-det p {
+.gym-faq-det p {
     margin: 5px 0 20px;
     text-align: justify;
 }
 
-.angono-page summary {
+.gym-page summary {
     display: flex;
     justify-content: space-between;
     gap: 20px;
@@ -2173,12 +2181,12 @@ body.angono-page {
     font-weight: 600;
 }
 
-.angono-page summary::-webkit-details-marker {
+.gym-page summary::-webkit-details-marker {
     display: none;
 }
 
 summary span {
-    color: var(--angono-blue);
+    color: var(--gym-blue);
     font-size: 20px;
     line-height: 1;
     transition: transform .2s ease;
@@ -2188,247 +2196,247 @@ details[open] summary span {
     transform: rotate(45deg);
 }
 
-.angono-page details p {
-    color: var(--angono-muted);
+.gym-page details p {
+    color: var(--gym-muted);
     font-size: 18px;
     max-width: fit-content;
     line-height: 1.8;
 }
 
-.angono-merch-button {
+.gym-merch-button {
     margin-top: 25px;
 }
 
 @media (max-width: 900px) {
-    .angono-hero {
+    .gym-hero {
         padding-top: 55px;
         padding-bottom: 55px;
         gap: 30px;
     }
 
-    .angono-hero-visual {
+    .gym-hero-visual {
         min-height: 330px;
     }
 
-    .angono-quick-facts {
+    .gym-quick-facts {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .angono-feature-grid {
+    .gym-feature-grid {
         grid-template-columns: 1fr 1fr;
     }
 
-    .angono-benefit-card {
+    .gym-benefit-card {
         grid-column: 1 / -1;
         min-height: auto;
     }
 
-    .angono-rate-layout {
+    .gym-rate-layout {
         grid-template-columns: 1fr 1fr;
     }
 
-    .angono-plans-card {
+    .gym-plans-card {
         grid-column: 1 / -1;
     }
 }
 
 
 @media (max-width: 640px) {
-    body.angono-page {
+    body.gym-page {
         font-size: 14px;
     }
 
-    .angono-hero {
+    .gym-hero {
         grid-template-columns: 1fr;
         padding: 15px 30px 48px;
         gap: 32px;
     }
 
-    .angono-page h1 {
+    .gym-page h1 {
         font-size: 60px;
         margin: 17px 0;
         line-height: 0.9;
         letter-spacing: -.04em
     }
 
-    .angono-eyebrow {
+    .gym-eyebrow {
         font-size: 9px;
     }
 
-    .angono-hero-copy>p {
+    .gym-hero-copy>p {
         font-size: 14px;
     }
 
-    .angono-hero-actions {
+    .gym-hero-actions {
         gap: 9px;
         margin-top: 22px;
     }
 
-    .angono-button {
+    .gym-button {
         font-size: 12px;
         min-height: 42px;
         padding: 11px 13px;
         gap: 10px;
     }
 
-    .angono-hero-note {
+    .gym-hero-note {
         margin-top: 27px;
     }
 
-    .angono-hero-visual {
+    .gym-hero-visual {
         min-height: 270px;
     }
 
-    .angono-hero-photo {
+    .gym-hero-photo {
         inset: 0 5% 5% 0;
         border-radius: 20px;
     }
 
-    .angono-photo-tag {
+    .gym-photo-tag {
         top: 14px;
         left: 12px;
         font-size: 8px;
     }
 
-    .angono-floating-card {
+    .gym-floating-card {
         right: 0;
         padding: 12px;
     }
 
-    .angono-quick-facts {
+    .gym-quick-facts {
         padding: 18px 20px;
         gap: 14px 8px;
     }
 
-    .angono-quick-facts>div {
+    .gym-quick-facts>div {
         gap: 9px;
         padding: 2px 0;
     }
 
-    .angono-fact-icon {
+    .gym-fact-icon {
         width: 34px;
         height: 34px;
         font-size: 17px;
         border-radius: 9px;
     }
 
-    .angono-quick-facts strong {
+    .gym-quick-facts strong {
         font-size: 12px;
     }
 
-    .angono-quick-facts small {
+    .gym-quick-facts small {
         font-size: 10px;
     }
 
-    .angono-section {
+    .gym-section {
         padding: 56px 20px;
     }
 
-    .angono-section-heading {
+    .gym-section-heading {
         display: block;
         margin-bottom: 23px;
     }
 
-    .angono-page h2 {
+    .gym-page h2 {
         font-size: 25px;
         margin-top: 10px;
     }
 
-    .angono-section-intro {
+    .gym-section-intro {
         font-size: 13px;
         margin-top: 15px;
     }
 
-    .angono-feature-grid {
+    .gym-feature-grid {
         grid-template-columns: 1fr;
         gap: 13px;
     }
 
-    .angono-feature-card {
+    .gym-feature-card {
         min-height: 300px;
     }
 
-    .angono-benefit-card {
+    .gym-benefit-card {
         min-height: auto;
         padding: 22px;
     }
 
-    .angono-feature-content h3,
-    .angono-benefit-card h3 {
+    .gym-feature-content h3,
+    .gym-benefit-card h3 {
         font-size: 19px;
     }
 
-    .angono-rate-layout {
+    .gym-rate-layout {
         grid-template-columns: 1fr;
         gap: 13px;
     }
 
-    .angono-plans-card {
+    .gym-plans-card {
         grid-column: auto;
     }
 
-    .angono-rate-card {
+    .gym-rate-card {
         padding: 22px;
         gap: 20px;
     }
 
-    .angono-rate-card h3 {
+    .gym-rate-card h3 {
         font-size: 19px;
     }
 
-    .angono-price {
+    .gym-price {
         font-size: 34px;
     }
 
-    .angono-coach-section {
+    .gym-coach-section {
         grid-template-columns: 1fr;
         gap: 25px;
         padding: 48px 20px;
     }
 
-    .angono-coach-art {
+    .gym-coach-art {
         min-height: 190px;
     }
 
-    .angono-coach-ring {
+    .gym-coach-ring {
         width: 135px;
         height: 135px;
     }
 
-    .angono-coach-symbol {
+    .gym-coach-symbol {
         font-size: 56px;
     }
 
-    .angono-coach-copy h2 {
+    .gym-coach-copy h2 {
         font-size: 25px;
     }
 
-    .angono-coach-copy p {
+    .gym-coach-copy p {
         font-size: 13px;
     }
 
-    .angono-location-card {
+    .gym-location-card {
         grid-template-columns: 1fr;
     }
 
-    .angono-map-panel {
+    .gym-map-panel {
         min-height: 210px;
     }
 
-    .angono-location-info {
+    .gym-location-info {
         padding: 25px 22px;
     }
 
-    .angono-location-info h3 {
+    .gym-location-info h3 {
         font-size: 22px;
     }
 
-    .angono-page summary {
+    .gym-page summary {
         font-size: 13px;
         padding: 17px 0;
     }
 
-    .angono-page details p {
+    .gym-page details p {
         font-size: 12px;
     }
 }
@@ -2438,7 +2446,7 @@ details[open] summary span {
 /* =========================================
    FEATURE BUTTONS
 ========================================= */
-.angono-feature-button {
+.gym-feature-button {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -2461,20 +2469,20 @@ details[open] summary span {
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.angono-feature-button:hover {
+.gym-feature-button:hover {
     transform: translateY(-2px);
     box-shadow: 0 0 18px rgba(0, 180, 216, 0.35);
 }
 
-.angono-feature-button:focus-visible,
-.angono-modal-close:focus-visible {
+.gym-feature-button:focus-visible,
+.gym-modal-close:focus-visible {
     outline: 3px solid #00b4d8;
     outline-offset: 4px;
 }
 
 /* FACILITY / AMENITIES MODALS */
 
-.angono-feature-modal {
+.gym-feature-modal {
     position: fixed;
     inset: 0;
     z-index: 999;
@@ -2495,13 +2503,13 @@ details[open] summary span {
     transition: opacity 0.25s ease, visibility 0.25s ease;
 }
 
-.angono-feature-modal.is-open {
+.gym-feature-modal.is-open {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
 }
 
-body.angono-page .modal-open {
+body.gym-page .modal-open {
     overflow: hidden;
 }
 
@@ -2509,7 +2517,7 @@ body.angono-page .modal-open {
    MODAL PANEL
 ========================================= */
 
-.angono-modal-panel {
+.gym-modal-panel {
     position: relative;
     width: min(850px, 100%);
     max-height: min(85vh, 850px);
@@ -2531,11 +2539,11 @@ body.angono-page .modal-open {
     transition: transform 0.25s ease;
 }
 
-.angono-feature-modal.is-open .angono-modal-panel {
+.gym-feature-modal.is-open .gym-modal-panel {
     transform: translateY(0) scale(1);
 }
 
-.angono-modal-close {
+.gym-modal-close {
     position: sticky;
     top: 0;
     float: right;
@@ -2561,12 +2569,12 @@ body.angono-page .modal-open {
     transition: background 0.2s ease, color 0.2s ease;
 }
 
-.angono-modal-close:hover {
+.gym-modal-close:hover {
     background: #00b4d8;
     color: #0d1b2a;
 }
 
-.angono-modal-eyebrow {
+.gym-modal-eyebrow {
     margin: 0 0 8px;
     color: #00b4d8;
     font-size: 12px;
@@ -2575,14 +2583,14 @@ body.angono-page .modal-open {
     text-transform: uppercase;
 }
 
-.angono-modal-panel h2 {
+.gym-modal-panel h2 {
     margin: 0 0 12px;
     color: #ffffff;
     font-size: clamp(25px, 4vw, 36px);
     line-height: 1.2;
 }
 
-.angono-modal-intro {
+.gym-modal-intro {
     margin: 0 0 26px;
     color: #c6d6e2;
     font-size: 15px;
@@ -2593,13 +2601,13 @@ body.angono-page .modal-open {
    TRAINING FACILITY CARDS
 ========================================= */
 
-.angono-modal-feature-grid {
+.gym-modal-feature-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 16px;
 }
 
-.angono-modal-feature-card {
+.gym-modal-feature-card {
     padding: 22px;
     border: 1px solid rgba(137, 194, 217, 0.2);
     border-radius: 14px;
@@ -2611,12 +2619,12 @@ body.angono-page .modal-open {
     transition: border-color 0.2s ease, transform 0.2s ease;
 }
 
-.angono-modal-feature-card:hover {
+.gym-modal-feature-card:hover {
     transform: translateY(-3px);
     border-color: rgba(0, 180, 216, 0.7);
 }
 
-.angono-feature-icon {
+.gym-feature-icon {
     display: grid;
     place-items: center;
 
@@ -2629,20 +2637,20 @@ body.angono-page .modal-open {
     font-size: 25px;
 }
 
-.angono-modal-feature-card h3 {
+.gym-modal-feature-card h3 {
     margin: 0 0 9px;
     color: #89c2d9;
     font-size: 18px;
 }
 
-.angono-modal-feature-card p {
+.gym-modal-feature-card p {
     margin: 0;
     color: #d0dce5;
     font-size: 14px;
     line-height: 1.7;
 }
 
-.angono-modal-note {
+.gym-modal-note {
     margin: 22px 0 0;
     padding-top: 16px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -2656,7 +2664,7 @@ body.angono-page .modal-open {
    AMENITIES LIST
 ========================================= */
 
-.angono-amenities-list {
+.gym-amenities-list {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 12px;
@@ -2666,7 +2674,7 @@ body.angono-page .modal-open {
     list-style: none;
 }
 
-.angono-amenities-list li {
+.gym-amenities-list li {
     display: flex;
     align-items: flex-start;
     gap: 12px;
@@ -2678,7 +2686,7 @@ body.angono-page .modal-open {
     background: rgba(13, 27, 42, 0.55);
 }
 
-.angono-amenity-check {
+.gym-amenity-check {
     display: grid;
     flex: 0 0 28px;
     place-items: center;
@@ -2692,14 +2700,14 @@ body.angono-page .modal-open {
     font-weight: 800;
 }
 
-.angono-amenities-list strong {
+.gym-amenities-list strong {
     display: block;
     margin: 2px 0 5px;
     color: #ffffff;
     font-size: 14px;
 }
 
-.angono-amenities-list p {
+.gym-amenities-list p {
     margin: 0;
     color: #bdcbd6;
     font-size: 13px;
@@ -2711,12 +2719,12 @@ body.angono-page .modal-open {
 ========================================= */
 
 @media (max-width: 600px) {
-    .angono-feature-modal {
+    .gym-feature-modal {
         align-items: flex-end;
         padding: 0;
     }
 
-    .angono-modal-panel {
+    .gym-modal-panel {
         width: 90%;
         max-height: 90vh;
 
@@ -2726,20 +2734,20 @@ body.angono-page .modal-open {
         margin-bottom: 40px;
     }
 
-    .angono-modal-feature-grid,
-    .angono-amenities-list {
+    .gym-modal-feature-grid,
+    .gym-amenities-list {
         grid-template-columns: 1fr;
     }
 
-    .angono-modal-feature-card {
+    .gym-modal-feature-card {
         padding: 18px;
     }
 
-    .angono-modal-panel h2 {
+    .gym-modal-panel h2 {
         padding-right: 12px;
     }
 
-    .angono-feature-button {
+    .gym-feature-button {
         max-width: 100%;
         white-space: normal;
         text-align: center;
@@ -2748,15 +2756,15 @@ body.angono-page .modal-open {
 
 @media (prefers-reduced-motion: reduce) {
 
-    .angono-feature-modal,
-    .angono-modal-panel,
-    .angono-feature-button,
-    .angono-modal-feature-card {
+    .gym-feature-modal,
+    .gym-modal-panel,
+    .gym-feature-button,
+    .gym-modal-feature-card {
         transition: none;
     }
 }
 
-.angono-logo-circle {
+.gym-logo-circle {
     flex: 0 0 40px;
     width: 40px;
     height: 40px;
@@ -2772,20 +2780,20 @@ body.angono-page .modal-open {
 }
 
 
-.angono-logo-text {
+.gym-logo-text {
     display: flex;
     flex-direction: column;
     line-height: 1.2;
 }
 
-.angono-logo-title {
+.gym-logo-title {
     font-size: 16px;
     font-weight: 800;
     letter-spacing: 1px;
     white-space: nowrap;
 }
 
-.angono-logo-subtitle {
+.gym-logo-subtitle {
     font-size: 10px;
     color: #00b4d8;
     font-weight: 700;
@@ -2793,7 +2801,7 @@ body.angono-page .modal-open {
     white-space: nowrap;
 }
 
-.angono-to-profile {
+.gym-to-profile {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -2801,7 +2809,7 @@ body.angono-page .modal-open {
 }
 
 
-.angono-to-profile img {
+.gym-to-profile img {
     display: block;
     width: 45px;
     height: 45px;
@@ -2810,7 +2818,7 @@ body.angono-page .modal-open {
     border-radius: 50%;
 }
 
-.angono-side-btn {
+.gym-side-btn {
     display: block;
     padding: 10px 18px;
     background: rgba(255, 255, 255, .1);
@@ -2822,56 +2830,56 @@ body.angono-page .modal-open {
     transition: background .2s ease, border-color .2s ease, box-shadow .2s ease;
 }
 
-.angono-side-btn i {
+.gym-side-btn i {
     color: #00b4d8;
     margin-right: 10px;
     width: 18px;
     text-align: center;
 }
 
-.angono-side-btn:hover,
-.angono-side-btn:focus-visible {
+.gym-side-btn:hover,
+.gym-side-btn:focus-visible {
     background: rgba(255, 255, 255, .08);
     border-color: rgba(0, 180, 216, .4);
     box-shadow: 0 0 12px rgba(0, 180, 216, .2);
 }
 
-body.angono-page {
+body.gym-page {
     padding-top: 65px;
 }
 
 @media (max-width: 520px) {
 
 
-    .angono-logo-circle {
+    .gym-logo-circle {
         flex-basis: 34px;
         width: 34px;
         height: 34px;
         font-size: 12px;
     }
 
-    .angono-logo-container {
+    .gym-logo-container {
         gap: 7px;
     }
 
-    .angono-logo-title {
+    .gym-logo-title {
         font-size: 12px;
         letter-spacing: .5px;
     }
 
-    .angono-logo-subtitle {
+    .gym-logo-subtitle {
         font-size: 8px;
         letter-spacing: .5px;
     }
 
-    .angono-to-profile img {
+    .gym-to-profile img {
         width: 39px;
         height: 39px;
     }
 }
 
 @media (max-width: 360px) {
-    .angono-logo-subtitle {
+    .gym-logo-subtitle {
         display: none;
     }
 
@@ -2879,7 +2887,7 @@ body.angono-page {
 }
 
 @media (max-width: 520px) {
-    .angono-side-btn {
+    .gym-side-btn {
         padding: 8px 14px;
         font-size: 13px;
     }
@@ -2887,7 +2895,7 @@ body.angono-page {
 
 /* ===== MEMBERSHIP INQUIRY POP-UP ===== */
 
-.angono-membership-modal {
+.gym-membership-modal {
     display: none;
     position: fixed;
     inset: 0;
@@ -2900,11 +2908,11 @@ body.angono-page {
     justify-content: center;
 }
 
-.angono-membership-modal:target {
+.gym-membership-modal:target {
     display: flex;
 }
 
-.angono-membership-panel {
+.gym-membership-panel {
     position: relative;
     width: 100%;
     max-width: 1050px;
@@ -2917,20 +2925,20 @@ body.angono-page {
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
 }
 
-.angono-membership-panel h2 {
+.gym-membership-panel h2 {
     margin: 0 40px 10px 0;
     color: #00b4d8;
     font-size: 30px;
     text-align: center;
 }
 
-.angono-membership-subtitle {
+.gym-membership-subtitle {
     margin-bottom: 28px;
     color: #c5d6e2;
     text-align: center;
 }
 
-.angono-membership-close {
+.gym-membership-close {
     position: absolute;
     top: 12px;
     right: 20px;
@@ -2940,17 +2948,17 @@ body.angono-page {
     text-decoration: none;
 }
 
-.angono-membership-close:hover {
+.gym-membership-close:hover {
     color: #00b4d8;
 }
 
-.angono-membership-options {
+.gym-membership-options {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 18px;
 }
 
-.angono-membership-option {
+.gym-membership-option {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -2961,46 +2969,46 @@ body.angono-page {
     transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
-.angono-membership-option:hover {
+.gym-membership-option:hover {
     transform: translateY(-4px);
     border-color: #00b4d8;
 }
 
-.angono-membership-option h3 {
+.gym-membership-option h3 {
     margin: 0 0 8px;
     color: #fff;
     font-size: 22px;
 }
 
-.angono-membership-duration {
+.gym-membership-duration {
     margin: 0;
     color: #c5d6e2;
 }
 
-.angono-membership-price {
+.gym-membership-price {
     margin: 12px 0;
     color: #00d4f5;
     font-size: 28px;
     font-weight: 700;
 }
 
-.angono-membership-option ul {
+.gym-membership-option ul {
     flex: 1;
     padding-left: 20px;
     color: #e1edf5;
     line-height: 1.8;
 }
 
-.angono-membership-option li::marker {
+.gym-membership-option li::marker {
     color: #00b4d8;
 }
 
-.angono-membership-featured {
+.gym-membership-featured {
     border: 2px solid #00b4d8;
     background: #193a51;
 }
 
-.angono-membership-tag {
+.gym-membership-tag {
     align-self: flex-start;
     margin-bottom: 12px;
     padding: 5px 10px;
@@ -3011,7 +3019,7 @@ body.angono-page {
     font-weight: 700;
 }
 
-.angono-membership-button {
+.gym-membership-button {
     display: block;
     margin-top: 16px;
     padding: 12px 15px;
@@ -3024,11 +3032,11 @@ body.angono-page {
     transition: background 0.2s ease;
 }
 
-.angono-membership-button:hover {
+.gym-membership-button:hover {
     background: #66e6ff;
 }
 
-.angono-membership-extra {
+.gym-membership-extra {
     margin-top: 25px;
     padding: 18px;
     background: rgba(0, 180, 216, 0.09);
@@ -3037,24 +3045,24 @@ body.angono-page {
     text-align: center;
 }
 
-.angono-membership-extra h3 {
+.gym-membership-extra h3 {
     margin: 0 0 8px;
     color: #00d4f5;
 }
 
-.angono-membership-extra p {
+.gym-membership-extra p {
     margin: 0;
     color: #e1edf5;
 }
 
-.angono-membership-note {
+.gym-membership-note {
     margin: 18px 0;
     color: #b8cbd9;
     font-size: 13px;
     text-align: center;
 }
 
-.angono-membership-back {
+.gym-membership-back {
     display: block;
     width: fit-content;
     margin: 20px auto 0;
@@ -3066,91 +3074,91 @@ body.angono-page {
     text-align: center;
 }
 
-.angono-membership-back:hover {
+.gym-membership-back:hover {
     background: rgba(0, 180, 216, 0.15);
 }
 
 @media (max-width: 800px) {
-    .angono-membership-options {
+    .gym-membership-options {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .angono-membership-panel {
+    .gym-membership-panel {
         padding: 28px 20px;
     }
 }
 
 @media (max-width: 520px) {
-    .angono-membership-modal {
+    .gym-membership-modal {
         padding: 8px;
     }
 
-    .angono-membership-panel {
+    .gym-membership-panel {
         margin: 8px auto;
         padding: 28px 15px;
     }
 
-    .angono-membership-panel h2 {
+    .gym-membership-panel h2 {
         font-size: 25px;
     }
 
-    .angono-membership-options {
+    .gym-membership-options {
         grid-template-columns: 1fr;
     }
 
-    .angono-membership-option {
+    .gym-membership-option {
         padding: 20px;
     }
 }
 
-.angono-feature-modal:target {
+.gym-feature-modal:target {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
 }
 
-.angono-feature-modal:target .angono-modal-panel {
+.gym-feature-modal:target .gym-modal-panel {
     transform: translateY(0) scale(1);
 }
 
-.angono-modal-close {
+.gym-modal-close {
     text-decoration: none;
 }
 
-.angono-branch-switch {
+.gym-branch-switch {
     border: 1px solid rgba(0, 180, 216, 0.35);
 }
 
-.angono-feature-modal {
+.gym-feature-modal {
     z-index: 9999;
 }
 
-.angono-branch-operations {
+.gym-branch-operations {
     background: rgba(8, 15, 27, .72);
-    border-top: 1px solid var(--angono-line);
+    border-top: 1px solid var(--gym-line);
     max-width: 1600px;
 }
 
-.angono-operations-heading {
+.gym-operations-heading {
     margin-bottom: 30px;
 }
 
-.angono-operations-heading h2 {
+.gym-operations-heading h2 {
     margin: 8px 0 10px;
 }
 
-.angono-operations-heading p,
-.angono-operation-description {
-    color: var(--angono-muted, #9aa9bb);
+.gym-operations-heading p,
+.gym-operation-description {
+    color: var(--gym-muted, #9aa9bb);
 }
 
-.angono-operations-grid {
+.gym-operations-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 28px;
 }
 
-.angono-operation-panel {
+.gym-operation-panel {
     min-width: 0;
     padding: 30px;
     border: 1px solid rgba(120, 150, 190, .16);
@@ -3158,40 +3166,40 @@ body.angono-page {
     background: #131d31;
 }
 
-.angono-operation-title {
+.gym-operation-title {
     display: flex;
     align-items: center;
     gap: 12px;
     margin-bottom: 14px;
 }
 
-.angono-operation-title h3 {
+.gym-operation-title h3 {
     flex: 1;
     margin: 0;
     font-size: clamp(18px, 2vw, 23px);
     letter-spacing: -.35px;
 }
 
-.angono-operation-icon {
+.gym-operation-icon {
     color: #00B4D8;
     font-size: 22px;
     width: 22px;
     text-align: center;
 }
 
-.angono-operation-description {
+.gym-operation-description {
     margin: 0 0 18px;
     font-size: 14px;
 }
 
-.angono-locker-list,
-.angono-inventory-list,
-.angono-coach-list {
+.gym-locker-list,
+.gym-inventory-list,
+.gym-coach-list {
     display: grid;
     gap: 14px;
 }
 
-.angono-operation-row {
+.gym-operation-row {
     min-width: 0;
     border: 1px solid rgba(120, 150, 190, .18);
     border-radius: 16px;
@@ -3199,20 +3207,20 @@ body.angono-page {
     color: #f6f8fc;
 }
 
-.angono-operation-row strong {
+.gym-operation-row strong {
     display: block;
     font-size: 16px;
     font-weight: 700;
 }
 
-.angono-operation-row small {
+.gym-operation-row small {
     display: block;
     margin-top: 3px;
     color: #9aa9bb;
     font-size: 14px;
 }
 
-.angono-locker-panel .angono-operation-row summary {
+.gym-locker-panel .gym-operation-row summary {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -3222,15 +3230,15 @@ body.angono-page {
     list-style: none;
 }
 
-.angono-locker-panel .angono-operation-row summary::-webkit-details-marker {
+.gym-locker-panel .gym-operation-row summary::-webkit-details-marker {
     display: none;
 }
 
-.angono-locker-panel .angono-operation-row summary small {
+.gym-locker-panel .gym-operation-row summary small {
     color: #37d6a0;
 }
 
-.angono-status-pill {
+.gym-status-pill {
     flex: 0 0 auto;
     padding: 9px 15px;
     border-radius: 11px;
@@ -3239,21 +3247,21 @@ body.angono-page {
     font-style: normal;
 }
 
-.angono-status-open {
+.gym-status-open {
     color: #37d6a0;
     background: rgba(16, 185, 129, .16);
     border: 1px solid rgba(16, 185, 129, .28);
 }
 
-.angono-row-detail {
+.gym-row-detail {
     margin: 0;
     padding: 0 20px 16px;
     color: #9aa9bb;
     font-size: 13px;
 }
 
-.angono-inventory-row,
-.angono-coach-row {
+.gym-inventory-row,
+.gym-coach-row {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -3261,29 +3269,29 @@ body.angono-page {
     padding: 18px;
 }
 
-.angono-inventory-row em {
+.gym-inventory-row em {
     color: #00B4D8;
     font-style: normal;
 }
 
-.angono-inventory-status {
+.gym-inventory-status {
     flex: 0 0 auto;
     padding: 5px 9px;
     border-radius: 5px;
     font-size: 12px;
 }
 
-.angono-status-operational {
+.gym-status-operational {
     color: #37d6a0;
     background: rgba(16, 185, 129, .18);
 }
 
-.angono-status-maintenance {
+.gym-status-maintenance {
     color: #00B4D8;
     background: rgba(245, 158, 11, .18);
 }
 
-.angono-coach-tag {
+.gym-coach-tag {
     flex: 0 0 auto;
     padding: 7px 10px;
     border-radius: 20px;
@@ -3292,7 +3300,7 @@ body.angono-page {
     font-size: 12px;
 }
 
-.angono-small-action {
+.gym-small-action {
     flex: 0 0 auto;
     display: inline-flex;
     align-items: center;
@@ -3306,70 +3314,70 @@ body.angono-page {
     font-weight: 800;
 }
 
-.angono-small-action:hover {
+.gym-small-action:hover {
     filter: brightness(.92);
 }
 
-.angono-operations-note {
+.gym-operations-note {
     margin: 18px 0 0;
     color: #9aa9bb;
     font-size: 13px;
 }
 
 @media (max-width: 900px) {
-    .angono-operations-grid {
+    .gym-operations-grid {
         grid-template-columns: 1fr;
     }
 }
 
 @media (max-width: 560px) {
-    .angono-operation-panel {
+    .gym-operation-panel {
         padding: 20px 16px;
     }
 
-    .angono-operation-title {
+    .gym-operation-title {
         flex-wrap: wrap;
     }
 
-    .angono-operation-title h3 {
+    .gym-operation-title h3 {
         min-width: 60%;
     }
 
-    .angono-small-action {
+    .gym-small-action {
         margin-left: 34px;
     }
 
-    .angono-inventory-row,
-    .angono-coach-row {
+    .gym-inventory-row,
+    .gym-coach-row {
         align-items: flex-start;
         padding: 15px 12px;
     }
 
-    .angono-operation-row strong {
+    .gym-operation-row strong {
         font-size: 14px;
     }
 
-    .angono-operation-row small {
+    .gym-operation-row small {
         font-size: 12px;
     }
 
-    .angono-inventory-status {
+    .gym-inventory-status {
         font-size: 10px;
     }
 }
 
 /* Branch Operations Buttons */
 
-.angono-branch-operations .angono-small-action,
-.angono-branch-operations .angono-operation-title .angono-small-action,
-.angono-branch-operations button:not(.angono-locker-cell):not(.angono-locker-tab),
-.angono-branch-operations .angono-locker-tab.active,
-.angono-branch-operations .angono-locker-status-filter:focus,
+.gym-branch-operations .gym-small-action,
+.gym-branch-operations .gym-operation-title .gym-small-action,
+.gym-branch-operations button:not(.gym-locker-cell):not(.gym-locker-tab),
+.gym-branch-operations .gym-locker-tab.active,
+.gym-branch-operations .gym-locker-status-filter:focus,
 button.button-primary,
 a.button-primary,
-.angono-button.button-primary,
-.angono-membership-button,
-.angono-feature-button {
+.gym-button.button-primary,
+.gym-membership-button,
+.gym-feature-button {
     background: var(--accent-cyan) !important;
     background-image: none !important;
     color: #0D1B2A !important;
@@ -3378,38 +3386,38 @@ a.button-primary,
 }
 
 
-.angono-branch-operations .angono-small-action:hover,
-.angono-branch-operations .angono-operation-title .angono-small-action:hover,
+.gym-branch-operations .gym-small-action:hover,
+.gym-branch-operations .gym-operation-title .gym-small-action:hover,
 button.button-primary:hover,
 a.button-primary:hover,
-.angono-button.button-primary:hover,
-.angono-membership-button:hover,
-.angono-feature-button:hover {
+.gym-button.button-primary:hover,
+.gym-membership-button:hover,
+.gym-feature-button:hover {
     background: var(--accent-cyan) !important;
     border-color: #00B4D8 !important;
     color: #0b111b !important;
 }
 
 
-.angono-branch-operations .angono-locker-tab:not(.angono-active) {
+.gym-branch-operations .gym-locker-tab:not(.gym-active) {
     background: transparent;
     color: #a9b5c6;
     border-color: transparent;
 }
 
-.angono-branch-operations .angono-locker-status-filter {
+.gym-branch-operations .gym-locker-status-filter {
     background-color: #0b111b;
     color: #f3f6fa;
     border-color: #2a3a50;
 }
 
-.angono-branch-operations button:focus-visible,
-.angono-branch-operations a:focus-visible {
+.gym-branch-operations button:focus-visible,
+.gym-branch-operations a:focus-visible {
     outline: 2px solid #00d9ff;
     outline-offset: 3px;
 }
 
-body.angono-page {
+body.gym-page {
     background-color: #0D1B2A;
     color: #FFFFFF;
     font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
@@ -3422,8 +3430,8 @@ h3,
 h4,
 h5,
 h6,
-.angono-brand,
-.angono-section-title {
+.gym-brand,
+.gym-section-title {
     font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
     color: #FFFFFF;
 }
@@ -3432,21 +3440,21 @@ p,
 li,
 label,
 small,
-.angono-subtitle,
-.angono-description {
+.gym-subtitle,
+.gym-description {
     font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
     color: #D0D8E0;
 }
 
-:is(.angono-eyebrow, .angono-section-label, .angono-section-kicker, .angono-heading > label, .angono-hero-copy > label, .angono-operation-kicker) {
+:is(.gym-eyebrow, .gym-section-label, .gym-section-kicker, .gym-heading > label, .gym-hero-copy > label, .gym-operation-kicker) {
     color: #00B4D8;
 }
 
-:is(.angono-panel, .angono-card, .angono-content-card, .angono-operation-panel, .angono-locker-matrix-panel, .angono-feature-modal .angono-modal-content) {
+:is(.gym-panel, .gym-card, .gym-content-card, .gym-operation-panel, .gym-locker-matrix-panel, .gym-feature-modal .gym-modal-content) {
     background: linear-gradient(180deg, rgba(26, 54, 82, 0.6) 0%, rgba(13, 27, 42, 0.8) 100%);
 }
 
-:is(.angono-btn, .angono-button, .angono-button-primary, .angono-feature-button, .angono-membership-button, .angono-small-action, .angono-primary, .angono-action-button, .angono-cta-button, button[type="submit"], a.btn, a.button) {
+:is(.gym-btn, .gym-button, .gym-button-primary, .gym-feature-button, .gym-membership-button, .gym-small-action, .gym-primary, .gym-action-button, .gym-cta-button, button[type="submit"], a.btn, a.button) {
     background-color: var(--accent-cyan);
     color: #0D1B2A;
     border-color: transparent;
@@ -3455,44 +3463,44 @@ small,
     transition: box-shadow .2s ease, transform .2s ease, filter .2s ease;
 }
 
-:is(.angono-btn, .angono-button, .angono-button-primary, .angono-feature-button, .angono-membership-button, .angono-small-action, .angono-primary, .angono-action-button, .angono-cta-button, button[type="submit"], a.btn, a.button):hover {
+:is(.gym-btn, .gym-button, .gym-button-primary, .gym-feature-button, .gym-membership-button, .gym-small-action, .gym-primary, .gym-action-button, .gym-cta-button, button[type="submit"], a.btn, a.button):hover {
     box-shadow: 0 0 12px rgba(41, 199, 255, 0.5);
     filter: brightness(1.05);
 }
 
-:is(.angono-btn, .angono-button, .angono-button-primary, .angono-feature-button, .angono-membership-button, .angono-small-action, .angono-primary, .angono-action-button, .angono-cta-button, button[type="submit"], a.btn, a.button):focus-visible {
+:is(.gym-btn, .gym-button, .gym-button-primary, .gym-feature-button, .gym-membership-button, .gym-small-action, .gym-primary, .gym-action-button, .gym-cta-button, button[type="submit"], a.btn, a.button):focus-visible {
     outline: 2px solid #00B4D8;
     outline-offset: 3px;
 }
 
-:is(a, .angono-link):not(.angono-btn):not(.angono-button):not(.angono-feature-button):not(.angono-membership-button) {
-    --angono-link-color: #00B4D8;
+:is(a, .gym-link):not(.gym-btn):not(.gym-button):not(.gym-feature-button):not(.gym-membership-button) {
+    --gym-link-color: #00B4D8;
 }
 
-.angono-page a {
+.gym-page a {
     text-underline-offset: 3px;
 }
 
 @media (min-width: 769px) {
-    .angono-page h2 {
+    .gym-page h2 {
         font-size: 25px;
     }
 
-    .angono-section-heading p,
-    .angono-heading p,
-    .angono-hero-copy>p {
+    .gym-section-heading p,
+    .gym-heading p,
+    .gym-hero-copy>p {
         font-size: 20px;
     }
 
-    body.angono-page {
+    body.gym-page {
         font-size: 16px;
     }
 
     small,
-    .angono-review,
-    .angono-review-text,
-    .angono-meta,
-    .angono-caption {
+    .gym-review,
+    .gym-review-text,
+    .gym-meta,
+    .gym-caption {
         font-size: 13px;
     }
 }
@@ -3501,14 +3509,14 @@ small,
 
     h1,
     h2,
-    .angono-brand-title,
-    .angono-page-title {
+    .gym-brand-title,
+    .gym-page-title {
         font-size: 20px;
     }
 
     h3,
-    .angono-section-heading p,
-    .angono-heading p {
+    .gym-section-heading p,
+    .gym-heading p {
         font-size: 17px;
     }
 
@@ -3520,10 +3528,10 @@ small,
     }
 
     small,
-    .angono-review,
-    .angono-review-text,
-    .angono-meta,
-    .angono-caption {
+    .gym-review,
+    .gym-review-text,
+    .gym-meta,
+    .gym-caption {
         font-size: 11px;
     }
 }
@@ -3531,53 +3539,53 @@ small,
 
 /* ===== WORKOUT SCHEDULER ===== */
 
-.angono-schedule-panel .angono-schedule-summary {
+.gym-schedule-panel .gym-schedule-summary {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
     margin: 18px 0
 }
 
-.angono-schedule-panel .angono-schedule-summary>div {
+.gym-schedule-panel .gym-schedule-summary>div {
     display: flex;
     align-items: center;
     gap: 10px;
     padding: 13px;
-    border: 1px solid var(--angono-line);
+    border: 1px solid var(--gym-line);
     border-radius: 12px;
     background: rgba(0, 180, 216, .06)
 }
 
-.angono-schedule-summary-icon {
+.gym-schedule-summary-icon {
     display: grid;
     place-items: center;
     width: 38px;
     height: 38px;
     flex-shrink: 0;
     border-radius: 10px;
-    color: var(--angono-blue);
+    color: var(--gym-blue);
     background: rgba(0, 180, 216, .12)
 }
 
-.angono-schedule-summary strong,
-.angono-schedule-summary small {
+.gym-schedule-summary strong,
+.gym-schedule-summary small {
     display: block
 }
 
-.angono-schedule-summary strong {
+.gym-schedule-summary strong {
     font-size: 12px
 }
 
-.angono-schedule-summary small {
-    color: var(--angono-muted);
+.gym-schedule-summary small {
+    color: var(--gym-muted);
     font-size: 10px
 }
 
-.angono-schedule-open-button {
+.gym-schedule-open-button {
     width: 100%
 }
 
-.angono-schedule-popup {
+.gym-schedule-popup {
     position: fixed;
     inset: 0;
     z-index: 10000;
@@ -3588,19 +3596,19 @@ small,
     backdrop-filter: blur(8px)
 }
 
-.angono-schedule-popup:target {
+.gym-schedule-popup:target {
     display: flex;
     align-items: flex-start;
     justify-content: center
 }
 
-.angono-schedule-popup-backdrop {
+.gym-schedule-popup-backdrop {
     position: fixed;
     inset: 0;
     cursor: default
 }
 
-.angono-schedule-popup-panel {
+.gym-schedule-popup-panel {
     position: relative;
     z-index: 1;
     width: min(1000px, 100%);
@@ -3614,7 +3622,7 @@ small,
     box-shadow: 0 25px 80px rgba(0, 0, 0, .5)
 }
 
-.angono-schedule-popup-close {
+.gym-schedule-popup-close {
     position: sticky;
     top: 0;
     float: right;
@@ -3623,7 +3631,7 @@ small,
     width: 40px;
     height: 40px;
     margin: -8px -8px 0 12px;
-    border: 1px solid var(--angono-line);
+    border: 1px solid var(--gym-line);
     border-radius: 50%;
     background: #0d1b2a;
     color: #fff;
@@ -3631,71 +3639,71 @@ small,
     line-height: 1
 }
 
-.angono-schedule-popup-panel h2 {
+.gym-schedule-popup-panel h2 {
     margin: 10px 0 12px
 }
 
-.angono-schedule-popup-intro,
-.angono-schedule-agenda-note {
-    color: var(--angono-muted);
+.gym-schedule-popup-intro,
+.gym-schedule-agenda-note {
+    color: var(--gym-muted);
     font-size: 13px;
     line-height: 1.7
 }
 
-.angono-schedule-month-heading {
+.gym-schedule-month-heading {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 15px;
     margin: 22px 0 12px;
-    color: var(--angono-blue);
+    color: var(--gym-blue);
     font-size: 11px;
     letter-spacing: .1em
 }
 
-.angono-schedule-month-heading strong {
+.gym-schedule-month-heading strong {
     color: #fff;
     font-size: 18px;
     letter-spacing: 0
 }
 
-.angono-schedule-calendar {
+.gym-schedule-calendar {
     display: grid;
     grid-template-columns: repeat(7, minmax(0, 1fr));
     gap: 6px
 }
 
-.angono-calendar-weekday {
+.gym-calendar-weekday {
     padding: 8px 2px;
     text-align: center;
-    color: var(--angono-blue);
+    color: var(--gym-blue);
     font-size: 10px;
     font-weight: 800
 }
 
-.angono-calendar-day,
-.angono-calendar-empty {
+.gym-calendar-day,
+.gym-calendar-empty {
     min-height: 70px;
     min-width: 0;
     padding: 8px;
-    border: 1px solid var(--angono-line);
+    border: 1px solid var(--gym-line);
     border-radius: 8px
 }
 
-.angono-calendar-day {
+.gym-calendar-day {
     background: rgba(0, 180, 216, .055)
 }
 
-.angono-calendar-day b,
-.angono-calendar-day small {
+.gym-calendar-day b,
+.gym-calendar-day small {
     display: block
 }
 
-.angono-calendar-day b {
+.gym-calendar-day b {
     font-size: 13px
 }
 
-.angono-calendar-day small {
+.gym-calendar-day small {
     margin-top: 5px;
     color: #9edbea;
     font-size: 10px;
@@ -3703,109 +3711,109 @@ small,
     overflow-wrap: anywhere
 }
 
-.angono-calendar-day.rest-day {
+.gym-calendar-day.rest-day {
     background: rgba(255, 255, 255, .025)
 }
 
-.angono-calendar-day.rest-day small {
+.gym-calendar-day.rest-day small {
     color: #aab8c5
 }
 
-.angono-schedule-agenda {
+.gym-schedule-agenda {
     margin-top: 24px
 }
 
-.angono-schedule-agenda h3 {
+.gym-schedule-agenda h3 {
     margin-bottom: 6px;
     font-size: 20px
 }
 
-.angono-schedule-agenda details {
-    border-bottom: 1px solid var(--angono-line);
+.gym-schedule-agenda details {
+    border-bottom: 1px solid var(--gym-line);
     padding: 0 8px
 }
 
-.angono-schedule-agenda summary {
+.gym-schedule-agenda summary {
     padding: 13px 0;
     font-size: 13px
 }
 
-.angono-schedule-agenda details ul {
+.gym-schedule-agenda details ul {
     margin: 0 0 16px;
     padding-left: 22px;
-    color: var(--angono-muted);
+    color: var(--gym-muted);
     font-size: 12px;
     line-height: 1.9
 }
 
-.angono-schedule-static-note {
+.gym-schedule-static-note {
     margin: 20px 0;
     padding: 12px 14px;
     border: 1px solid rgba(0, 180, 216, .22);
     border-radius: 10px;
     background: rgba(0, 180, 216, .06);
-    color: var(--angono-muted);
+    color: var(--gym-muted);
     font-size: 12px
 }
 
-.angono-schedule-static-note i {
-    color: var(--angono-blue);
+.gym-schedule-static-note i {
+    color: var(--gym-blue);
     margin-right: 6px
 }
 
-.angono-schedule-popup-done {
+.gym-schedule-popup-done {
     width: 100%
 }
 
 @media(max-width:600px) {
-    .angono-schedule-popup {
+    .gym-schedule-popup {
         padding: 10px
     }
 
-    .angono-schedule-popup-panel {
+    .gym-schedule-popup-panel {
         padding: 20px 14px;
         max-height: calc(100vh - 20px)
     }
 
-    .angono-schedule-calendar {
+    .gym-schedule-calendar {
         gap: 3px
     }
 
-    .angono-calendar-day,
-    .angono-calendar-empty {
+    .gym-calendar-day,
+    .gym-calendar-empty {
         min-height: 56px;
         padding: 4px;
         border-radius: 5px
     }
 
-    .angono-calendar-weekday {
+    .gym-calendar-weekday {
         font-size: 8px;
         padding: 5px 0
     }
 
-    .angono-calendar-day b {
+    .gym-calendar-day b {
         font-size: 11px
     }
 
-    .angono-calendar-day small {
+    .gym-calendar-day small {
         font-size: 8px;
         margin-top: 3px
     }
 
-    .angono-schedule-month-heading strong {
+    .gym-schedule-month-heading strong {
         font-size: 15px
     }
 
-    .angono-schedule-panel .angono-schedule-summary {
+    .gym-schedule-panel .gym-schedule-summary {
         grid-template-columns: 1fr
     }
 }
 
-.angono-pl-sub {
+.gym-pl-sub {
     font-size: 15px;
 }
 
-.angono-pl-color {
+.gym-pl-color {
     display: flex;
     flex-direction: row;
     gap: 20px;
@@ -3813,21 +3821,21 @@ small,
     align-items: center;
 }
 
-.angono-pl-available,
-.angono-pl-accupied,
-.angono-pl-mainte {
+.gym-pl-available,
+.gym-pl-accupied,
+.gym-pl-mainte {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 10px;
 }
 
-.angono-color-lb {
+.gym-color-lb {
     font-weight: 600;
     color: rgb(255, 255, 255, 0.8);
 }
 
-.angono-green {
+.gym-green {
     width: 20px;
     height: 20px;
     background-color: rgba(34, 197, 94, 0.2);
@@ -3835,7 +3843,7 @@ small,
     border-radius: 5px;
 }
 
-.angono-red {
+.gym-red {
     width: 20px;
     height: 20px;
     background-color: rgba(239, 68, 68, 0.2);
@@ -3843,7 +3851,7 @@ small,
     border-radius: 5px;
 }
 
-.angono-orange {
+.gym-orange {
     width: 20px;
     height: 20px;
     background-color: rgba(245, 158, 11, 0.2);
@@ -3851,13 +3859,13 @@ small,
     border-radius: 5px;
 }
 
-.angono-pl-cells {
+.gym-pl-cells {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(95px, 1fr));
     gap: 10px;
 }
 
-.angono-pl-locker {
+.gym-pl-locker {
     display: flex;
     flex-direction: column;
     width: 100px;
@@ -3866,43 +3874,43 @@ small,
     text-align: center;
 }
 
-.angono-chc {
+.gym-chc {
     display: flex;
     align-items: center;
     padding: 4px 15px;
     justify-content: space-between;
 }
 
-.angono-chc i {
+.gym-chc i {
     font-size: 14px;
     color: rgb(255, 255, 255, 0.6);
 }
 
-.angono-clh {
+.gym-clh {
     font-weight: 700;
     color: rgb(255, 255, 255, 0.6);
 }
 
-.angono-p-o {
+.gym-p-o {
     background-color: rgba(239, 68, 68, 0.2);
     border: solid 1px rgba(239, 68, 68, 0.5);
 }
 
-.angono-p-m {
+.gym-p-m {
     background-color: rgba(245, 158, 11, 0.2);
     border: solid 1px rgba(245, 158, 11, 0.5);
 }
 
-.angono-p-a {
+.gym-p-a {
     background-color: rgba(34, 197, 94, 0.2);
     border: solid 1px rgba(34, 197, 94, 0.5);
 }
 
-.angono-ccn {
+.gym-ccn {
     margin: 9px 0;
 }
 
-.angono-csn {
+.gym-csn {
     font-weight: 700;
     color: rgb(255, 255, 255, 0.6);
 }
@@ -3912,46 +3920,46 @@ small,
 ========================================= */
 
 
-.angono-branch-operations {
+.gym-branch-operations {
     padding-top: 64px;
 }
 
-.angono-main-content {
+.gym-main-content {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.angono-home-card {
+.gym-home-card {
     padding: clamp(20px, 3vw, 34px);
-    border: 1px solid var(--angono-line);
-    border-radius: var(--angono-radius);
-    background: var(--angono-panel);
+    border: 1px solid var(--gym-line);
+    border-radius: var(--gym-radius);
+    background: var(--gym-panel);
     box-shadow: 0 18px 50px rgba(0, 0, 0, .16);
 }
 
-.angono-pl-head {
+.gym-pl-head {
     display: flex;
     flex-direction: column;
     gap: 10px;
     margin-bottom: 24px;
 }
 
-.angono-home-label {
+.gym-home-label {
     margin: 0;
     font-size: clamp(23px, 3vw, 30px);
     letter-spacing: -.03em;
 }
 
-.angono-pl-sub {
+.gym-pl-sub {
     margin: 0;
     max-width: 760px;
-    color: var(--angono-muted);
+    color: var(--gym-muted);
     font-size: 14px;
     line-height: 1.7;
 }
 
-.angono-pl-color {
+.gym-pl-color {
     display: flex;
     flex-wrap: wrap;
     gap: 18px 24px;
@@ -3959,23 +3967,23 @@ small,
     margin: 0 0 22px;
 }
 
-.angono-pl-available,
-.angono-pl-accupied,
-.angono-pl-mainte {
+.gym-pl-available,
+.gym-pl-accupied,
+.gym-pl-mainte {
     display: flex;
     align-items: center;
     gap: 9px;
 }
 
-.angono-color-lb {
+.gym-color-lb {
     color: rgba(255, 255, 255, .82);
     font-size: 13px;
     font-weight: 600;
 }
 
-.angono-green,
-.angono-red,
-.angono-orange {
+.gym-green,
+.gym-red,
+.gym-orange {
     display: inline-block;
     flex: 0 0 20px;
     width: 20px;
@@ -3983,22 +3991,22 @@ small,
     border-radius: 5px;
 }
 
-.angono-green {
+.gym-green {
     background: rgba(34, 197, 94, .2);
     border: 1px solid rgba(34, 197, 94, .5);
 }
 
-.angono-red {
+.gym-red {
     background: rgba(239, 68, 68, .2);
     border: 1px solid rgba(239, 68, 68, .5);
 }
 
-.angono-orange {
+.gym-orange {
     background: rgba(245, 158, 11, .2);
     border: 1px solid rgba(245, 158, 11, .5);
 }
 
-.angono-pl-cells {
+.gym-pl-cells {
     display: grid;
     grid-template-columns: repeat(10, minmax(0, 1fr));
     gap: 10px;
@@ -4008,18 +4016,18 @@ small,
 /* Locker Grid */
 
 @media (max-width: 1050px) {
-    .angono-pl-cells {
+    .gym-pl-cells {
         grid-template-columns: repeat(5, minmax(0, 1fr));
     }
 }
 
 @media (max-width: 640px) {
-    .angono-pl-cells {
+    .gym-pl-cells {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 
-.angono-pl-locker {
+.gym-pl-locker {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -4032,15 +4040,15 @@ small,
     transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
 }
 
-.angono-pl-locker:hover,
-.angono-pl-locker:focus-visible {
+.gym-pl-locker:hover,
+.gym-pl-locker:focus-visible {
     transform: translateY(-3px);
     box-shadow: 0 10px 24px rgba(0, 0, 0, .2);
-    outline: 2px solid var(--angono-blue);
+    outline: 2px solid var(--gym-blue);
     outline-offset: 2px;
 }
 
-.angono-chc {
+.gym-chc {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -4048,33 +4056,33 @@ small,
     padding: 0 5px 6px;
 }
 
-.angono-chc i {
+.gym-chc i {
     color: rgba(255, 255, 255, .72);
     font-size: 14px;
 }
 
-.angono-clh {
+.gym-clh {
     color: rgba(255, 255, 255, .78);
     font-size: 13px;
     font-weight: 800;
 }
 
-.angono-p-o {
+.gym-p-o {
     background: rgba(239, 68, 68, .13);
     border: 1px solid rgba(239, 68, 68, .48);
 }
 
-.angono-p-m {
+.gym-p-m {
     background: rgba(245, 158, 11, .13);
     border: 1px solid rgba(245, 158, 11, .5);
 }
 
-.angono-p-a {
+.gym-p-a {
     background: rgba(34, 197, 94, .12);
     border: 1px solid rgba(34, 197, 94, .45);
 }
 
-.angono-ccn {
+.gym-ccn {
     display: block;
     margin: 7px 0;
     color: #fff;
@@ -4083,7 +4091,7 @@ small,
     overflow-wrap: anywhere;
 }
 
-.angono-csn {
+.gym-csn {
     display: block;
     margin-top: auto;
     color: rgba(255, 255, 255, .72);
@@ -4091,26 +4099,26 @@ small,
     font-weight: 800;
 }
 
-.angono-locker-footnote {
+.gym-locker-footnote {
     display: flex;
     align-items: flex-start;
     gap: 9px;
     margin: 22px 0 0;
     padding-top: 16px;
-    border-top: 1px solid var(--angono-line);
-    color: var(--angono-muted);
+    border-top: 1px solid var(--gym-line);
+    color: var(--gym-muted);
     font-size: 12px;
     line-height: 1.7;
 }
 
-.angono-locker-footnote i {
-    color: var(--angono-blue);
+.gym-locker-footnote i {
+    color: var(--gym-blue);
     margin-top: 4px;
 }
 
 /* LOCKER DETAIL POPUPS */
 
-.angono-locker-detail {
+.gym-locker-detail {
     position: fixed;
     inset: 0;
     z-index: 10000;
@@ -4127,13 +4135,13 @@ small,
     transition: opacity .2s ease, visibility .2s ease;
 }
 
-.angono-locker-detail:target {
+.gym-locker-detail:target {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
 }
 
-.angono-locker-detail-panel {
+.gym-locker-detail-panel {
     position: relative;
     width: min(460px, 100%);
     max-height: 85vh;
@@ -4145,32 +4153,32 @@ small,
     box-shadow: 0 25px 70px rgba(0, 0, 0, .45);
 }
 
-.angono-locker-detail-panel h3 {
+.gym-locker-detail-panel h3 {
     margin: 10px 0 12px;
     font-size: 28px;
 }
 
-.angono-locker-detail-panel p {
+.gym-locker-detail-panel p {
     margin: 15px 0;
     color: #d1dde6;
     font-size: 14px;
 }
 
-.angono-locker-detail-close {
+.gym-locker-detail-close {
     float: right;
     display: grid;
     place-items: center;
     width: 38px;
     height: 38px;
     margin: -8px -8px 0 12px;
-    border: 1px solid var(--angono-line);
+    border: 1px solid var(--gym-line);
     border-radius: 50%;
     color: #fff;
     font-size: 27px;
     line-height: 1;
 }
 
-.angono-locker-status {
+.gym-locker-status {
     display: inline-block;
     padding: 5px 10px;
     border-radius: 999px;
@@ -4178,68 +4186,68 @@ small,
     font-weight: 800;
 }
 
-.angono-locker-status.occupied {
+.gym-locker-status.occupied {
     color: #ffb4b4;
     background: rgba(239, 68, 68, .16);
     border: 1px solid rgba(239, 68, 68, .45);
 }
 
-.angono-locker-status.maintenance {
+.gym-locker-status.maintenance {
     color: #ffd18a;
     background: rgba(245, 158, 11, .16);
     border: 1px solid rgba(245, 158, 11, .45);
 }
 
-.angono-locker-status.available {
+.gym-locker-status.available {
     color: #9af0b6;
     background: rgba(34, 197, 94, .16);
     border: 1px solid rgba(34, 197, 94, .45);
 }
 
-.angono-locker-detail-note {
+.gym-locker-detail-note {
     padding-top: 12px;
-    border-top: 1px solid var(--angono-line);
-    color: var(--angono-muted) !important;
+    border-top: 1px solid var(--gym-line);
+    color: var(--gym-muted) !important;
     font-size: 12px !important;
 }
 
 @media (max-width: 640px) {
-    .angono-branch-operations {
+    .gym-branch-operations {
         padding-top: 45px;
     }
 
-    .angono-pl-cells {
+    .gym-pl-cells {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 10px;
     }
 
-    .angono-pl-locker {
+    .gym-pl-locker {
         min-height: 105px;
     }
 
-    .angono-pl-color {
+    .gym-pl-color {
         gap: 12px 16px;
     }
 
-    .angono-color-lb {
+    .gym-color-lb {
         font-size: 12px;
     }
 
-    .angono-locker-detail-panel {
+    .gym-locker-detail-panel {
         padding: 24px;
     }
 }
 
 /* workout agenda fields*/
 
-.angono-calendar-day {
+.gym-calendar-day {
     display: flex;
     flex-direction: column;
     gap: 6px;
     min-height: 92px;
 }
 
-.angono-calendar-agenda-input {
+.gym-calendar-agenda-input {
     display: block;
     width: 100%;
     min-width: 0;
@@ -4255,23 +4263,23 @@ small,
     line-height: 1.35;
 }
 
-.angono-calendar-agenda-input::placeholder {
+.gym-calendar-agenda-input::placeholder {
     color: #8fa7b9;
     opacity: 1;
 }
 
-.angono-calendar-agenda-input:focus {
-    border-color: var(--angono-blue);
+.gym-calendar-agenda-input:focus {
+    border-color: var(--gym-blue);
     box-shadow: 0 0 0 2px rgba(0, 180, 216, .12);
 }
 
 @media(max-width:600px) {
-    .angono-calendar-day {
+    .gym-calendar-day {
         min-height: 78px;
         gap: 4px;
     }
 
-    .angono-calendar-agenda-input {
+    .gym-calendar-agenda-input {
         min-height: 34px;
         padding: 5px 3px;
         font-size: 9px;
@@ -4280,7 +4288,7 @@ small,
 
 /* Schedule planner launch card */
 
-.angono-schedule-launch-card {
+.gym-schedule-launch-card {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -4292,25 +4300,25 @@ small,
     background: linear-gradient(135deg, rgba(0, 180, 216, .09), rgba(13, 27, 42, .7))
 }
 
-.angono-schedule-launch-copy {
+.gym-schedule-launch-copy {
     min-width: 0
 }
 
-.angono-schedule-launch-copy h2 {
+.gym-schedule-launch-copy h2 {
     margin: 6px 0 8px;
     font-size: clamp(20px, 2.2vw, 27px);
     color: var(--text, #fff)
 }
 
-.angono-schedule-launch-copy p {
+.gym-schedule-launch-copy p {
     max-width: 650px;
     margin: 0;
-    color: var(--angono-muted, #c4d3df);
+    color: var(--gym-muted, #c4d3df);
     font-size: 13px;
     line-height: 1.7
 }
 
-.angono-schedule-open-button {
+.gym-schedule-open-button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -4319,31 +4327,31 @@ small,
     white-space: nowrap
 }
 
-.angono-schedule-open-button i {
+.gym-schedule-open-button i {
     margin-right: 2px
 }
 
 @media(max-width:680px) {
-    .angono-schedule-launch-card {
+    .gym-schedule-launch-card {
         align-items: stretch;
         flex-direction: column;
         gap: 16px;
         padding: 18px
     }
 
-    .angono-schedule-open-button {
+    .gym-schedule-open-button {
         width: 100%;
         white-space: normal
     }
 }
 
 /* Q&A PLACEHOLDER */
-.angono-qna-only-section {
+.gym-qna-only-section {
     margin-top: 24px;
     margin-bottom: 28px;
 }
 
-.angono-qna-only-card {
+.gym-qna-only-card {
     display: flex;
     align-items: center;
     gap: 16px;
@@ -4354,56 +4362,56 @@ small,
 }
 
 
-.angono-qna-only-copy {
+.gym-qna-only-copy {
     flex: 1;
     min-width: 0;
 }
 
-.angono-qna-only-copy h3 {
+.gym-qna-only-copy h3 {
     margin: 0 0 6px;
     color: #fff;
 }
 
-.angono-qna-only-copy p {
+.gym-qna-only-copy p {
     margin: 0;
     color: #d7e3ec;
 }
 
-.angono-qna-only-card .angono-button {
+.gym-qna-only-card .gym-button {
     flex-shrink: 0;
 }
 
 
 @media (max-width: 600px) {
-    .angono-qna-only-card {
+    .gym-qna-only-card {
         align-items: flex-start;
         flex-wrap: wrap;
         padding: 16px;
     }
 
-    .angono-qna-only-copy {
+    .gym-qna-only-copy {
         flex-basis: calc(100% - 52px);
     }
 
-    .angono-qna-only-card .angono-button {
+    .gym-qna-only-card .gym-button {
         margin-left: 48px;
     }
 }
 
-/* Angono locker + workout planner */
+/* gym locker + workout planner */
 
-.angono-branch-operations .angono-operations-heading {
+.gym-branch-operations .gym-operations-heading {
     margin-bottom: 24px;
 }
 
-.angono-branch-operations .angono-operations-grid {
+.gym-branch-operations .gym-operations-grid {
     display: grid;
     grid-template-columns: minmax(0, 1.18fr) minmax(280px, .82fr);
     align-items: stretch;
     gap: 22px;
 }
 
-.angono-branch-operations .angono-operation-panel {
+.gym-branch-operations .gym-operation-panel {
     min-width: 0;
     padding: 22px;
     border: 1px solid rgba(0, 180, 216, .22);
@@ -4411,7 +4419,7 @@ small,
     background: linear-gradient(180deg, rgba(26, 54, 82, .6) 0%, rgba(13, 27, 42, .8) 100%);
 }
 
-.angono-branch-operations .angono-angono-locker-style {
+.gym-branch-operations .angono-gym-locker-style {
     width: 100%;
     padding: 0;
     border: 0;
@@ -4419,18 +4427,18 @@ small,
     box-shadow: none;
 }
 
-.angono-branch-operations .angono-angono-locker-style .angono-locker-card {
+.gym-branch-operations .angono-gym-locker-style .gym-locker-card {
     width: 100%;
     min-width: 0;
     padding: clamp(18px, 2.2vw, 28px);
 }
 
-.angono-branch-operations .angono-angono-locker-style .angono-pl-cells {
+.gym-branch-operations .angono-gym-locker-style .gym-pl-cells {
     grid-template-columns: repeat(5, minmax(0, 1fr));
     gap: 10px;
 }
 
-.angono-branch-operations .angono-angono-locker-style .angono-pl-locker {
+.gym-branch-operations .angono-gym-locker-style .gym-pl-locker {
     width: auto;
     min-width: 0;
     min-height: 112px;
@@ -4438,18 +4446,18 @@ small,
     padding: 10px 5px 12px;
 }
 
-.angono-branch-operations .angono-angono-locker-style .angono-chc {
+.gym-branch-operations .angono-gym-locker-style .gym-chc {
     justify-content: space-between;
     gap: 5px;
     padding: 0 5px 6px;
 }
 
-.angono-branch-operations .angono-angono-locker-style .angono-ccn {
+.gym-branch-operations .angono-gym-locker-style .gym-ccn {
     margin: 9px 0;
     overflow-wrap: anywhere;
 }
 
-.angono-branch-operations .angono-angono-planner-card {
+.gym-branch-operations .angono-gym-planner-card {
     min-width: 0;
     display: flex;
     flex-direction: column;
@@ -4457,14 +4465,14 @@ small,
     align-self: stretch;
 }
 
-.angono-branch-operations .angono-angono-planner-card .angono-operation-title {
+.gym-branch-operations .angono-gym-planner-card .gym-operation-title {
     display: flex;
     align-items: center;
     gap: 12px;
     margin: 0;
 }
 
-.angono-branch-operations .angono-angono-planner-card .angono-operation-title h3 {
+.gym-branch-operations .angono-gym-planner-card .gym-operation-title h3 {
     min-width: 0;
     flex: 1;
     margin: 0;
@@ -4472,12 +4480,12 @@ small,
     line-height: 1.3;
 }
 
-.angono-branch-operations .angono-angono-planner-card .angono-operation-description {
+.gym-branch-operations .angono-gym-planner-card .gym-operation-description {
     margin: 0;
     line-height: 1.7;
 }
 
-.angono-branch-operations .angono-bin-planner-preview {
+.gym-branch-operations .gym-bin-planner-preview {
     flex: 1;
     min-height: 250px;
     padding: 22px;
@@ -4486,21 +4494,21 @@ small,
     background: linear-gradient(145deg, rgba(0, 180, 216, .10), rgba(8, 23, 36, .62));
 }
 
-.angono-branch-operations .angono-bin-planner-preview h4 {
+.gym-branch-operations .gym-bin-planner-preview h4 {
     margin: 10px 0;
     font-size: clamp(20px, 2vw, 27px);
     line-height: 1.2;
     color: #fff;
 }
 
-.angono-branch-operations .angono-bin-planner-preview p {
+.gym-branch-operations .gym-bin-planner-preview p {
     margin: 0;
     line-height: 1.7;
     color: #c4d3df;
     font-size: 13px;
 }
 
-.angono-branch-operations .angono-bin-open-planner {
+.gym-branch-operations .gym-bin-open-planner {
     display: flex;
     width: 100%;
     align-items: center;
@@ -4512,40 +4520,40 @@ small,
 }
 
 @media (max-width: 1050px) {
-    .angono-branch-operations .angono-operations-grid {
+    .gym-branch-operations .gym-operations-grid {
         grid-template-columns: minmax(0, 1fr) minmax(250px, .8fr);
         gap: 16px;
     }
 
-    .angono-branch-operations .angono-angono-locker-style .angono-pl-cells {
+    .gym-branch-operations .angono-gym-locker-style .gym-pl-cells {
         grid-template-columns: repeat(5, minmax(0, 1fr));
     }
 }
 
 @media (max-width: 900px) {
-    .angono-branch-operations .angono-operations-grid {
+    .gym-branch-operations .gym-operations-grid {
         grid-template-columns: minmax(0, 1fr);
     }
 
-    .angono-branch-operations .angono-angono-locker-style .angono-pl-cells {
+    .gym-branch-operations .angono-gym-locker-style .gym-pl-cells {
         grid-template-columns: repeat(5, minmax(0, 1fr));
     }
 }
 
 @media (max-width: 560px) {
-    .angono-branch-operations .angono-operation-panel {
+    .gym-branch-operations .gym-operation-panel {
         padding: 16px;
     }
 
-    .angono-branch-operations .angono-angono-locker-style .angono-locker-card {
+    .gym-branch-operations .angono-gym-locker-style .gym-locker-card {
         padding: 16px;
     }
 
-    .angono-branch-operations .angono-angono-locker-style .angono-pl-cells {
+    .gym-branch-operations .angono-gym-locker-style .gym-pl-cells {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .angono-branch-operations .angono-bin-planner-preview {
+    .gym-branch-operations .gym-bin-planner-preview {
         min-height: 210px;
     }
 }
@@ -4564,20 +4572,6 @@ small,
     display: block;
 }
 
-:root {
-    --bg: #0D1B2A;
-    --deep: #0D1B2A;
-    --panel: linear-gradient(180deg, rgba(26, 54, 82, 0.6) 0%, rgba(13, 27, 42, 0.8) 100%);
-    --line: rgba(137, 194, 217, .24);
-    --line-strong: rgba(0, 180, 216, .55);
-    --text: #FFFFFF;
-    --muted: #D0D8E0;
-    --cyan: #00B4D8;
-    --button-gradient: linear-gradient(90deg, #89c2d9, #468faf);
-    --white: #FFFFFF;
-    --max: 1600px
-}
-
 a {
     text-decoration: none;
     color: inherit
@@ -4588,7 +4582,7 @@ button {
     cursor: pointer
 }
 
-.swim-section {
+.all-section {
     width: min(var(--max), calc(100% - 40px));
     margin: auto;
     padding: 30px 0 95px;
@@ -4600,7 +4594,7 @@ button {
     padding: 0 0 30px 0;
 }
 
-.swim-panel {
+.all-panel {
     border: 1px solid var(--line);
     border-radius: 22px;
     box-shadow: 0 22px 70px rgba(0, 0, 0, .3)
@@ -4693,7 +4687,7 @@ button {
 
 /* HERO / INTRODUCTION */
 
-.swim-hero {
+.main-hero-design {
     min-height: 700px;
     width: min(var(--max), calc(100% - 40px));
     margin: auto auto 50px auto;
@@ -4722,12 +4716,12 @@ button {
      font-family: 'Inter';
 }
 
-.swim-hero label,
-.swim-heading label,
+.main-hero-design label,
+.all-heading label,
 .swim-lesson-wrap label,
 .swim-hockey-copy label,
-.swim-coach label,
-.swim-location-grid label,
+.all-coach label,
+.two-card-grid label,
 .swim-qna label {
     color: var(--cyan);
     font-size: 10px;
@@ -4735,21 +4729,21 @@ button {
     letter-spacing: .17em
 }
 
-.swim-hero h1 {
+.main-hero-design h1 {
     margin-top: 20px;
     font-size: clamp(42px, 5vw, 68px);
     line-height: .92;
     letter-spacing: -.055em
 }
 
-.swim-hero h1 em,
+.main-hero-design h1 em,
 .swim-lesson-wrap em,
-.swim-location-grid em {
+.two-card-grid em {
     color: var(--cyan);
     font-style: normal
 }
 
-.swim-hero p {
+.main-hero-design p {
     max-width: 650px;
     margin-top: 25px;
     color: var(--muted);
@@ -4757,14 +4751,14 @@ button {
     line-height: 1.7
 }
 
-.swim-actions {
+.all-actions {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
     margin-top: 28px
 }
 
-.swim-btn {
+.all-btn {
     min-height: 47px;
     padding: 0 18px;
     display: inline-flex;
@@ -4777,17 +4771,17 @@ button {
     background: transparent
 }
 
-.swim-btn.swim-primary {
+.all-btn.all-primary {
     color: #03131c;
     background: var(--cyan);
     border-color: var(--cyan)
 }
 
-.swim-btn:hover {
+.all-btn:hover {
     transform: translateY(-2px)
 }
 
-.swim-stats {
+.all-stats {
     display: flex;
     gap: 35px;
     margin-top: 48px;
@@ -4795,23 +4789,23 @@ button {
     border-top: 1px solid var(--line)
 }
 
-.swim-stats div {
+.all-stats div {
     display: flex;
     align-items: center;
     gap: 10px
 }
 
-.swim-stats b {
+.all-stats b {
     font-size: 22px
 }
 
-.swim-stats span {
+.all-stats span {
     font-size: 10px;
     color: var(--muted);
     line-height: 1.35
 }
 
-.swim-pool-card {
+.all-display-card {
     width: min(500px, 100%);
     padding: 18px;
     border: 1px solid var(--line-strong);
@@ -4821,14 +4815,14 @@ button {
     transform: rotate(2deg)
 }
 
-.swim-pool-top,
-.swim-pool-bottom {
+.all-display-top,
+.all-display-bottom {
     display: flex;
     justify-content: space-between;
     align-items: center
 }
 
-.swim-pool-top {
+.all-display-top {
     padding: 4px;
     color: var(--muted);
     font-size: 9px;
@@ -4836,7 +4830,7 @@ button {
     letter-spacing: .15em
 }
 
-.swim-pool {
+.all-display {
     height: 370px;
     margin-top: 12px;
     position: relative;
@@ -4845,7 +4839,7 @@ button {
     background: repeating-linear-gradient(0deg, #ffffff08 0, #ffffff08 2px, transparent 2px, transparent 24px), linear-gradient(135deg, #0d607b, #062d43 60%, #061a2b)
 }
 
-.swim-pool>i {
+.all-display>i {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -4853,28 +4847,28 @@ button {
     background: #b7f1ff55
 }
 
-.swim-pool>i:nth-child(1) {
+.all-display>i:nth-child(1) {
     left: 15%
 }
 
-.swim-pool>i:nth-child(2) {
+.all-display>i:nth-child(2) {
     left: 32%
 }
 
-.swim-pool>i:nth-child(3) {
+.all-display>i:nth-child(3) {
     left: 49%
 }
 
-.swim-pool>i:nth-child(4) {
+.all-display>i:nth-child(4) {
     left: 66%
 }
 
 
-.swim-pool>i:nth-child(5) {
+.all-display>i:nth-child(5) {
     left: 83%
 }
 
-.swim-pool strong {
+.all-display strong {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -4890,11 +4884,11 @@ button {
     font-size: 28px
 }
 
-.swim-pool-bottom {
+.all-display-bottom {
     padding: 15px 3px 2px
 }
 
-.swim-pool-bottom small {
+.all-display-bottom small {
     color: var(--muted);
     display: block;
     font-size: 8px;
@@ -4902,7 +4896,7 @@ button {
 }
 
 
-.swim-pool-bottom b {
+.all-display-bottom b {
     font-size: 15px;
     letter-spacing: .1em
 }
@@ -4944,7 +4938,7 @@ button {
 }
 
 
-.swim-heading {
+.all-heading {
     display: flex;
     justify-content: space-between;
     align-items: end;
@@ -4952,7 +4946,7 @@ button {
     margin-bottom: 28px;
 }
 
-.swim-heading h2 {
+.all-heading h2 {
     margin-top: 8px;
     font-size: clamp(34px, 4vw, 52px);
     line-height: 1;
@@ -4960,7 +4954,7 @@ button {
 }
 
 
-.swim-heading p {
+.all-heading p {
     max-width: 620px;
     margin-top: 12px;
     color: var(--muted);
@@ -4968,7 +4962,7 @@ button {
 }
 
 
-.swim-heading>b {
+.all-heading>b {
     white-space: nowrap;
     color: var(--cyan);
     font-size: 10px;
@@ -5002,7 +4996,7 @@ button {
 
 
 .swim-activity:hover,
-.swim-coach:hover {
+.all-coach:hover {
     transform: translateY(-5px);
     border-color: var(--accent-blue);
     box-shadow: 0 10px 30px rgba(59, 130, 246, 0.15);
@@ -5114,7 +5108,7 @@ button {
 }
 
 
-.swim-lesson-wrap .swim-btn {
+.swim-lesson-wrap .all-btn {
     margin-top: 25px
 }
 
@@ -5282,7 +5276,7 @@ button {
 }
 
 
-.swim-coach-grid {
+.all-coach-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 14px
@@ -5295,7 +5289,7 @@ button {
 }
 
 
-.swim-coach {
+.all-coach {
     padding: 25px;
     display: grid;
     grid-template-columns: 65px 1fr;
@@ -5303,7 +5297,7 @@ button {
 }
 
 
-.swim-coach>i {
+.all-coach>i {
     width: 65px;
     height: 65px;
     display: grid;
@@ -5316,13 +5310,13 @@ button {
 }
 
 
-.swim-coach h3 {
+.all-coach h3 {
     margin-top: 5px;
     font-size: 22px
 }
 
 
-.swim-coach p {
+.all-coach p {
     margin-top: 7px;
     color: var(--muted);
     line-height: 1.6
@@ -5339,21 +5333,27 @@ button {
     align-items: center;
 }
 
-.swim-location {
+.two-card {
     background: #04111b;
     border-top: 1px solid var(--line);
     max-width: 1600px;
 }
 
-.sports-location {
+.sports-grid {
     max-width: 100%;
     display: flex;
     flex-direction: column;
     gap: -40px;
 }
 
+.martial-grid{
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: -40px;
+}
 
-.swim-location-grid {
+.two-card-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0;
@@ -5361,7 +5361,7 @@ button {
     max-width: 1200px;
 }
 
-.swim-map {
+.map-layout {
     min-height: 300px;
     display: grid;
     place-items: center;
@@ -5373,7 +5373,7 @@ button {
     background-size: 40px 40px
 }
 
-.swim-map i {
+.map-layout i {
     width: 90px;
     height: 90px;
     display: grid;
@@ -5385,7 +5385,7 @@ button {
     border: 1px solid #59d8ff70
 }
 
-.swim-map span {
+.map-layout span {
     position: absolute;
     left: 22px;
     bottom: 20px;
@@ -5395,7 +5395,7 @@ button {
     font-weight: 900
 }
 
-.swim-location-grid>div:last-child {
+.two-card-grid>div:last-child {
     padding: 50px;
     border: 1px solid var(--line);
     border-left: 0;
@@ -5403,31 +5403,31 @@ button {
     background: #092131
 }
 
-.swim-location-grid h2 {
+.two-card-grid h2 {
     margin-top: 8px;
     font-size: clamp(40px, 4vw, 60px);
     line-height: .98
 }
 
-.swim-location-grid p {
+.two-card-grid p {
     margin-top: 18px;
     color: var(--muted);
     line-height: 1.7
 }
 
-.swim-location-info {
+.two-card-info {
     display: grid;
     gap: 12px;
     margin: 25px 0
 }
 
-.swim-location-info span {
+.two-card-info span {
     display: flex;
     align-items: center;
     gap: 12px
 }
 
-.swim-location-info i {
+.two-card-info i {
     width: 40px;
     height: 40px;
     display: grid;
@@ -5463,7 +5463,7 @@ button {
     line-height: 1.6
 }
 
-.swim-btn.swim-light {
+.all-btn.swim-light {
     background: #fff;
     color: #08202d;
     border-color: #fff
@@ -5480,16 +5480,16 @@ button {
     text-decoration: none;
 }
 
-.swim-btn {
+.all-btn {
     text-decoration: none;
 }
 
 @media(max-width:1000px) {
-    .swim-hero {
+    .main-hero-design {
         grid-template-columns: 1fr
     }
 
-    .swim-pool-card {
+    .all-display-card {
         margin: 30px 0 50px;
     }
 
@@ -5499,19 +5499,19 @@ button {
 
     .swim-lesson-wrap,
     .swim-hockey-grid,
-    .swim-location-grid {
+    .two-card-grid {
         grid-template-columns: 1fr
     }
 
-    .swim-coach-grid {
+    .all-coach-grid {
         grid-template-columns: 1fr
     }
 
-    .swim-map {
+    .map-layout {
         border-radius: 22px 22px 0 0
     }
 
-    .swim-location-grid>div:last-child {
+    .two-card-grid>div:last-child {
         border-left: 1px solid var(--line);
         border-top: 0;
         border-radius: 0 0 22px 22px
@@ -5534,8 +5534,8 @@ button {
         font-size: 7px
     }
 
-    .swim-section,
-    .swim-hero,
+    .all-section,
+    .main-hero-design,
     .swim-tabs {
         width: calc(100% - 24px)
     }
@@ -5547,23 +5547,23 @@ button {
         width: calc(100% - 50px)
     }
 
-    .swim-hero {
+    .main-hero-design {
         padding-block: 100px 40px
     }
 
-    .swim-hero h1 {
+    .main-hero-design h1 {
         font-size: clamp(50px, 14vw, 70px)
     }
 
-    .swim-hero p {
+    .main-hero-design p {
         font-size: 14px
     }
 
-    .swim-stats {
+    .all-stats {
         gap: 18px
     }
 
-    .swim-pool {
+    .all-display {
         height: 280px
     }
 
@@ -5595,16 +5595,16 @@ button {
         padding: 28px
     }
 
-    .swim-coach {
+    .all-coach {
         grid-template-columns: 52px 1fr
     }
 
-    .swim-coach>i {
+    .all-coach>i {
         width: 52px;
         height: 52px
     }
 
-    .swim-location-grid>div:last-child {
+    .two-card-grid>div:last-child {
         padding: 32px 24px
     }
 
@@ -5614,7 +5614,7 @@ button {
         gap: 22px
     }
 
-    .swim-section{
+    .all-section{
     padding: 0 0 30px;
 }
 
@@ -5630,23 +5630,23 @@ button {
         display: none
     }
 
-    .swim-actions {
+    .all-actions {
         flex-direction: column
     }
 
-    .swim-actions .swim-btn,
-    .swim-lesson-wrap .swim-btn,
-    .swim-location-grid .swim-btn {
+    .all-actions .all-btn,
+    .swim-lesson-wrap .all-btn,
+    .two-card-grid .all-btn {
         width: 100%
     }
 
-    .swim-stats {
+    .all-stats {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 8px
     }
 
-    .swim-stats div {
+    .all-stats div {
         align-items: flex-start;
         flex-direction: column
     }
@@ -5660,7 +5660,7 @@ button {
         grid-column: 3
     }
 
-    .swim-location-grid h2 {
+    .two-card-grid h2 {
     font-size: 38px;
 }
 
@@ -5668,7 +5668,7 @@ button {
 }
 
 @media (max-width: 392px){
-    .swim-location-grid h2 {
+    .two-card-grid h2 {
     font-size: 34px;
 }
 }
@@ -5694,7 +5694,7 @@ h4,
 h5,
 h6,
 .swim-brand,
-.swim-section-title {
+.all-section-title {
     color: #FFFFFF;
     font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
 }
@@ -5711,39 +5711,39 @@ small,
 }
 
 
-.swim-hero label,
-.swim-heading label,
+.main-hero-design label,
+.all-heading label,
 .swim-lesson-wrap label,
 .swim-hockey-copy label,
-.swim-coach label,
-.swim-location-grid label,
+.all-coach label,
+.two-card-grid label,
 .swim-qna label,
-.swim-hero h1 em,
+.main-hero-design h1 em,
 .swim-lesson-wrap em,
-.swim-location-grid em,
+.two-card-grid em,
 .swim-link,
 .swim-tabs a:hover {
     color: #00B4D8;
 }
 
 /*
-.swim-panel,
-.swim-pool-card,
+.all-panel,
+.all-display-card,
 .swim-activity,
 .swim-detail,
 .swim-steps article,
-.swim-coach,
-.swim-location,
+.all-coach,
+.two-card,
 .swim-qna,
-.swim-stats div {
+.all-stats div {
     background: linear-gradient(180deg, rgba(26, 54, 82, 0.6) 0%, rgba(13, 27, 42, 0.8) 100%);
 }
     */
 
 
-.swim-btn,
-.swim-btn.swim-primary,
-.swim-btn.swim-light,
+.all-btn,
+.all-btn.all-primary,
+.all-btn.swim-light,
 #lessonBtn,
 #hireBtn,
 button.swim-link {
@@ -5756,7 +5756,7 @@ button.swim-link {
 }
 
 
-.swim-btn:hover,
+.all-btn:hover,
 #lessonBtn:hover,
 #hireBtn:hover,
 button.swim-link:hover {
@@ -5781,10 +5781,10 @@ a {
         font-size: 25px;
     }
 
-    .swim-section-heading p,
-    .swim-heading p,
-    .swim-hero p,
-    .swim-hero-copy>p {
+    .all-section-heading p,
+    .all-heading p,
+    .main-hero-design p,
+    .main-hero-design-copy>p {
         font-size: 20px;
     }
 
@@ -5815,8 +5815,8 @@ a {
     }
 
     h3,
-    .swim-section-heading p,
-    .swim-heading p {
+    .all-section-heading p,
+    .all-heading p {
         font-size: 17px;
     }
 
@@ -5839,13 +5839,13 @@ a {
 /* === SWIMMING PAGE PHOTO LAYOUT === */
 
 
-.swim-pool-photo {
+.all-display-photo {
     height: 370px;
     background: #062d43;
     isolation: isolate;
 }
 
-.swim-pool-photo>img {
+.all-display-photo>img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -5853,7 +5853,7 @@ a {
     filter: saturate(1.1) contrast(1.04);
 }
 
-.swim-pool-chip {
+.all-display-chip {
     position: absolute;
     left: 14px;
     bottom: 15px;
@@ -5936,12 +5936,12 @@ a {
     background: #04131dcc;
 }
 
-.swim-coach {
+.all-coach {
     position: relative;
     grid-template-columns: 76px 1fr;
 }
 
-.swim-coach-avatar {
+.all-coach-avatar {
     position: relative;
     width: 76px;
     height: 76px;
@@ -5976,7 +5976,7 @@ a {
 
 /* Coach Avatar */
 
-.swim-coach-avatar::before {
+.all-coach-avatar::before {
     content: "";
     position: absolute;
     z-index: 1;
@@ -5990,7 +5990,7 @@ a {
     box-shadow: 0 -4px 0 2px #07304d;
 }
 
-.swim-coach-avatar::after {
+.all-coach-avatar::after {
     content: "";
     position: absolute;
     z-index: 1;
@@ -6003,15 +6003,15 @@ a {
     background: #07304d;
 }
 
-.swim-coach .swim-coach-icon {
+.all-coach .all-coach-icon {
     display: none;
 }
 
-.swim-map {
+.map-layout {
     background: #071c29;
 }
 
-.swim-location-photo {
+.two-card-photo {
     position: absolute;
     inset: 0;
     width: 100%;
@@ -6021,24 +6021,24 @@ a {
     filter: saturate(1.1);
 }
 
-.swim-map:after {
+.map-layout:after {
     content: "";
     position: absolute;
     inset: 0;
     background: linear-gradient(135deg, rgba(3, 16, 26, .3), rgba(3, 16, 26, .78));
 }
 
-.swim-map>i,
-.swim-map>span {
+.map-layout>i,
+.map-layout>span {
     z-index: 1;
 }
 
-.swim-map>i {
+.map-layout>i {
     box-shadow: 0 10px 35px #0008;
 }
 
 @media(max-width:700px) {
-    .swim-pool-photo {
+    .all-display-photo {
         height: 280px;
     }
 
@@ -6046,24 +6046,24 @@ a {
         height: 180px;
     }
 
-    .swim-coach {
+    .all-coach {
         grid-template-columns: 60px 1fr;
         padding: 20px;
     }
 
-    .swim-coach-avatar {
+    .all-coach-avatar {
         width: 60px;
         height: 60px;
         border-radius: 14px;
     }
 
-    .swim-coach-avatar::before {
+    .all-coach-avatar::before {
         width: 21px;
         height: 24px;
         top: 10px;
     }
 
-    .swim-coach-avatar::after {
+    .all-coach-avatar::after {
         width: 50px;
         height: 31px;
         bottom: -8px;
@@ -6180,7 +6180,6 @@ hr {
     margin: 5px 0;
 }
 
-/* Typography */
 h1 {
     font-size: 22px;
     text-transform: uppercase;
@@ -6234,14 +6233,12 @@ p.muay-desc strong {
 
 .benefit-pill .icon {
     color: #00b4d8;
-    /* Approximate color for icons */
 }
 
 .benefit-pill:hover {
     box-shadow: 0 0 12px rgba(41, 199, 255, 0.5);
 }
 
-/* Tags for Level 1 */
 .muay-tags-container {
     display: flex;
     flex-wrap: wrap;
@@ -6269,7 +6266,6 @@ p.muay-desc strong {
     color: #ddd;
 }
 
-/* Calendar Widget */
 .muay-calendar-widget {
     background-color: #fff;
     border-radius: 15px;
@@ -6320,7 +6316,6 @@ p.muay-desc strong {
     font-weight: bold;
 }
 
-/* Make up policy */
 .muay-makeup-policy {
     display: flex;
     gap: 8px;
@@ -6339,7 +6334,6 @@ p.muay-desc strong {
     color: #00b4d8;
 }
 
-/* Inclusions */
 .muay-inclusions-box {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -6393,9 +6387,6 @@ p.muay-desc strong {
     border-radius: 50%;
     border: 2px solid #00b4d8;
     object-fit: cover;
-    /* Uses placeholder as requested */
-    background-image: url('images/PLACEHOLDER');
-    background-size: cover;
 }
 
 .muay-coach-name {
@@ -6520,11 +6511,6 @@ p.muay-desc strong {
 }
 
 .martial-program-card {
-    /*background: #101d2c;
-  border-radius: 16px;
-  overflow: hidden;
-  margin-bottom: 20px;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.4);*/
     display: flex;
     flex-direction: column;
     width: 400px;
@@ -6538,7 +6524,6 @@ p.muay-desc strong {
 .martial-program-card:hover {
     box-shadow: 0 0 12px rgba(41, 199, 255, 0.5);
     transform: scale(1.05);
-    /*gusto ko sana e imbis na nagglow, lumalaki, kaso di ko pa alam pano*/
 }
 
 .martial-card-image {
@@ -6559,8 +6544,6 @@ p.muay-desc strong {
     position: absolute;
     top: 10px;
     left: 10px;
-    /*background: #29c7ff;
-  color: #06101a;*/
     background-color: #00b4d8;
     color: #fff;
     font-size: 10px;
@@ -6717,7 +6700,6 @@ p.muay-desc strong {
 .payment-desc {
     font-size: 12px;
     color: #ccc;
-    /*line-height: 1.4;*/
     margin-bottom: 5px;
 }
 
@@ -7135,342 +7117,12 @@ p.muay-desc strong {
 
 /* Container */
 .dance-container {
-    /*width: 100%;
-    max-width: 420px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    background: rgba(0, 0, 0, 0.4);
-    min-height: 100vh;*/
     display: flex;
     flex-direction: column;
     width: 1600px;
     max-width: 100%;
 }
 
-/* Main Content Padding */
-.dance-content-area {
-    padding: 0 20px 30px 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-}
-
-/* Header Title & Subtitle */
-.dance-title-section {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-}
-
-.dance-main-title {
-    font-size: 26px;
-    font-weight: 800;
-    text-transform: uppercase;
-}
-
-.dance-main-title .dance-highlight {
-    color: #00b4d8;
-}
-
-.dance-subtitle {
-    font-size: 13px;
-    color: #e0e0e0;
-    max-width: 80%;
-    line-height: 1.4;
-}
-
-/* Tabs */
-.dance-tabs {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    margin-top: 5px;
-}
-
-.dance-tab {
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 20px;
-    padding: 6px 15px;
-    font-size: 11px;
-    color: #fff;
-    cursor: pointer;
-    text-decoration: none;
-}
-
-.dance-tab.active {
-    background-color: #0077b6;
-    border-color: #00b4d8;
-    text-decoration: none;
-    color: white;
-}
-
-.dance-tab:hover {
-    box-shadow: 0 0 12px rgba(41, 199, 255, 0.5);
-}
-
-.dance-tab.active:hover {
-    box-shadow: 0 0 12px rgba(41, 199, 255, 0.5);
-}
-
-/* Base Card Styling */
-.dance-card {
-    display: flex;
-    flex-direction: column;
-    background: rgba(20, 25, 30, 0.85);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    border-radius: 16px;
-    overflow: hidden;
-    max-width: 600px;
-
-}
-
-#dance-fitnessd {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-#dance-coache {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-.dance-card-img {
-    max-width: 600px;
-    height: auto;
-    background-image: url('images/PLACEHOLDER.jpg');
-    background-size: cover;
-    background-position: center;
-}
-
-.dance-card-content {
-    padding: 15px;
-}
-
-.dance-card-title {
-    font-size: 14px;
-    font-weight: 800;
-    text-transform: uppercase;
-}
-
-.dance-card-highlight {
-    color: #00b4d8;
-    font-size: 11px;
-    font-weight: 700;
-    margin-top: 2px;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-}
-
-.dance-divider {
-    height: 1px;
-    background: rgba(255, 255, 255, 0.2);
-    margin: 10px 0;
-}
-
-.dance-card-desc {
-    font-size: 11px;
-    color: #cccccc;
-    line-height: 1.5;
-}
-
-/* Upcoming Sessions */
-.dance-glass-section {
-    background: linear-gradient(135deg, rgba(130, 160, 180, 0.3), rgba(40, 50, 60, 0.4));
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 20px;
-    padding: 20px 15px;
-    max-width: 600px;
-}
-
-.dance-section-heading {
-    font-size: 18px;
-    font-weight: 700;
-    margin-bottom: 15px;
-}
-
-/* Inner Session Card */
-.dance-session-card {
-    background: rgba(30, 40, 50, 0.6);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
-    overflow: hidden;
-    transition: transform 0.3s ease;
-}
-
-.dance-session-card:hover {
-    box-shadow: 0 0 12px rgba(41, 199, 255, 0.5);
-    transform: scale(1.05);
-}
-
-.dance-session-img-wrapper {
-    position: relative;
-    width: 100%;
-    height: auto;
-    background-image: url('images/PLACEHOLDER.jpg');
-    background-size: cover;
-    background-position: center;
-}
-
-.dance-badge-overlay {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background-color: #00b4d8;
-    color: #fff;
-    padding: 4px 10px;
-    border-radius: 12px;
-    font-size: 10px;
-    font-weight: 600;
-}
-
-.dance-session-content {
-    padding: 15px;
-}
-
-.dance-session-date-row {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 4px;
-}
-
-.dance-session-date-row .dance-icon {
-    font-size: 14px;
-}
-
-.dance-session-date {
-    font-size: 13px;
-    font-weight: 700;
-}
-
-.dance-session-location {
-    color: #00b4d8;
-    font-size: 11px;
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-
-.dance-session-desc {
-    font-size: 11px;
-    color: #d0d0d0;
-    line-height: 1.4;
-    margin-bottom: 15px;
-}
-
-.dance-btn-no-reg {
-    background: linear-gradient(90deg, #89c2d9, #468faf);
-    color: #fff;
-    border: none;
-    border-radius: 20px;
-    padding: 8px 0;
-    width: 100%;
-    font-size: 11px;
-    font-weight: 700;
-    cursor: pointer;
-    text-align: center;
-}
-
-/* Coaches Section */
-
-.dance-coaches-section {
-    background: rgba(20, 25, 30, 0.8);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    border-radius: 16px;
-    padding: 15px;
-}
-
-.dance-coaches-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 15px;
-    font-size: 14px;
-    font-weight: 700;
-}
-
-.dance-coaches-list {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.dance-coach-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-}
-
-/*
-.dance-coach-avatar {
-    width: 65px;
-    height: 65px;
-    border-radius: 50%;
-    border: 2px solid #555;
-    background-image: url('images/PLACEHOLDER.jpg');
-    background-size: cover;
-    background-position: center;
-    object-fit: cover;
-    display: block;
-}*/
-
-.dance-coach-name {
-    background-color: #005f73;
-    color: #fff;
-    font-size: 9px;
-    font-weight: 600;
-    padding: 4px 15px;
-    border-radius: 12px;
-    text-align: center;
-}
-
-/* Help & Footer Section */
-.dance-help-box {
-    background: #101d2c;
-    border-radius: 14px;
-    padding: 16px;
-    text-align: center;
-    margin-top: 10px;
-}
-
-.dance-help-title {
-    color: #ffffff;
-    font-weight: bold;
-    font-size: 13px;
-    margin-bottom: 6px;
-}
-
-.dance-help-text {
-    color: #8fa3af;
-    font-size: 11px;
-    line-height: 1.5;
-    margin-bottom: 14px;
-}
-
-.dance-message-btn {
-    background: #1c2c3d;
-    color: #ffffff;
-    border: 1px solid #3a5568;
-    border-radius: 20px;
-    padding: 10px 24px;
-    font-size: 12px;
-    cursor: pointer;
-}
-
-.dance-message-btn:hover {
-    box-shadow: 0 0 12px rgba(41, 199, 255, 0.5);
-}
 
 /*Elgie*/
 
@@ -7528,79 +7180,6 @@ p.muay-desc strong {
     margin: 10px 20px;
 }
 
-.Sports_grid-card {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 20px;
-
-}
-
-.Sports_sports-card-1 {
-    display: flex;
-    flex-direction: column;
-    max-width: 100%;
-    max-height: fit-content;
-    background: linear-gradient(180deg, rgba(26, 54, 82, 0.6) 0%, rgba(13, 27, 42, 0.8) 100%);
-    backdrop-filter: blur(15px);
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    border-radius: 20px;
-    padding: 10px 20px;
-    width: 600px;
-    margin: 0 0 0 auto;
-}
-
-.Sports_sports-card-2 {
-    display: flex;
-    flex-direction: column;
-    max-width: 100%;
-    max-height: 100%;
-    background: linear-gradient(180deg, rgba(26, 54, 82, 0.6) 0%, rgba(13, 27, 42, 0.8) 100%);
-    backdrop-filter: blur(15px);
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    border-radius: 20px;
-    padding: 10px 20px;
-    width: 600px;
-    margin: 0 auto 0 0;
-}
-
-.Sports_sports-card:hover {
-    border-color: rgba(0, 180, 216, 0.4);
-    box-shadow: 0 0 12px rgba(0, 180, 216, 0.2);
-}
-
-.Sports_card-title {
-    font-size: 20px;
-    margin: 10px 0;
-    background-color: rgba(255, 255, 255, 0.2);
-    width: fit-content;
-    padding: 5px 10px;
-    border-radius: 20px;
-}
-
-.Sports_sports-card img {
-    width: 100%;
-    height: 100%;
-    border: 1px solid rgb(255, 255, 255, 0.12);
-    border-radius: 15px;
-}
-
-.Sports_price-container {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    background-color: rgba(255, 255, 255, 0.2);
-    width: fit-content;
-    text-align: center;
-    padding: 7px 13px;
-    border-radius: 15px;
-    margin: 10px 0;
-    font-weight: 700;
-}
-
-.Sports_price-container .Sports_price {
-    color: #00b4d8;
-}
-
 @media (max-width: 875px) {
     .Sports_sports-container h1 {
         color: #e0e0e0;
@@ -7619,6 +7198,7 @@ p.muay-desc strong {
         width: 350px;
     }
 
+    /*
     .Sports_grid-card {
         display: flex;
         flex-direction: column;
@@ -7664,7 +7244,7 @@ p.muay-desc strong {
 
     .Sports_price-label {
         font-size: 15px;
-    }
+    }*/
 
     .dance-coach-grid {
         display: grid;
@@ -7677,75 +7257,6 @@ p.muay-desc strong {
     }
 }
 
-.Sports_date-container {
-    margin: 5px 0;
-    font-size: small;
-}
-
-.Sports_date-container i {
-    color: #00b4d8;
-}
-
-.Sports_event-title {
-    font-size: 25px;
-    margin: 5px 0;
-}
-
-.Sports_desc {
-    margin: 5px 0;
-    font-size: small;
-}
-
-.Sports_loc-container {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin: 5px 0;
-}
-
-.Sports_loc-container i {
-    color: #00b4d8;
-}
-
-.Sports_line-break {
-    background: rgba(255, 255, 255, 0.2);
-    height: 1px;
-    width: 100%;
-    margin: 10px 0;
-}
-
-.Sports_lower-part {
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
-    margin: 15px 0;
-}
-
-.Sports_entry-container {
-    display: flex;
-    flex-direction: column;
-}
-
-.Sports_entry-container .Sports_entry {
-    color: #00b4d8;
-    font-weight: 700;
-    letter-spacing: 1px;
-}
-
-.Sports_reg-btn {
-    background-color: #00b4d8;
-    border: none;
-    padding: 8px 15px;
-    border-radius: 15px;
-    color: white;
-}
-
-.Sports_reg-btn:hover {
-    cursor: pointer;
-    box-shadow: 0 0 12px rgba(0, 180, 216, 0.2);
-}
-
-
 
 /*View Info*/
 .Sports_view-details {
@@ -7757,8 +7268,8 @@ p.muay-desc strong {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 600px;
-    width: 100%;
+    max-width: 90%;
+    width: 600px;
     max-height: fit-content;
     background: linear-gradient(180deg, rgba(26, 54, 82, 0.6) 0%, rgba(13, 27, 42, 0.8) 100%);
     backdrop-filter: blur(15px);
@@ -7773,6 +7284,12 @@ p.muay-desc strong {
     opacity: 0%;
     box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
     z-index: 4;
+}
+
+@media (max-width:667px){
+    .Sports_view-container{
+        left: 41%;
+    }
 }
 
 .Sports_view-container i {
@@ -11083,3 +10600,462 @@ select option {
     cursor: pointer;
     box-shadow: 0 0 12px rgba(0, 180, 216, 0.2);
 }
+
+
+/* old design */
+
+/*
+.dance-coach-avatar {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    border: 2px solid #555;
+    background-image: url('images/PLACEHOLDER.jpg');
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+    display: block;
+
+.dance-content-area {
+    padding: 0 20px 30px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.dance-title-section {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.dance-main-title {
+    font-size: 26px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.dance-main-title .dance-highlight {
+    color: #00b4d8;
+}
+
+.dance-subtitle {
+    font-size: 13px;
+    color: #e0e0e0;
+    max-width: 80%;
+    line-height: 1.4;
+}
+
+.dance-tabs {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.dance-tab {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    padding: 6px 15px;
+    font-size: 11px;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.dance-tab.active {
+    background-color: #0077b6;
+    border-color: #00b4d8;
+    text-decoration: none;
+    color: white;
+}
+
+.dance-tab:hover {
+    box-shadow: 0 0 12px rgba(41, 199, 255, 0.5);
+}
+
+.dance-tab.active:hover {
+    box-shadow: 0 0 12px rgba(41, 199, 255, 0.5);
+}
+
+.dance-card {
+    display: flex;
+    flex-direction: column;
+    background: rgba(20, 25, 30, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    overflow: hidden;
+    max-width: 600px;
+
+}
+
+#dance-fitnessd {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+#dance-coache {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.dance-card-img {
+    max-width: 600px;
+    height: auto;
+    background-image: url('images/PLACEHOLDER.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.dance-card-content {
+    padding: 15px;
+}
+
+.dance-card-title {
+    font-size: 14px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.dance-card-highlight {
+    color: #00b4d8;
+    font-size: 11px;
+    font-weight: 700;
+    margin-top: 2px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.dance-divider {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.2);
+    margin: 10px 0;
+}
+
+.dance-card-desc {
+    font-size: 11px;
+    color: #cccccc;
+    line-height: 1.5;
+}
+
+.dance-glass-section {
+    background: linear-gradient(135deg, rgba(130, 160, 180, 0.3), rgba(40, 50, 60, 0.4));
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 20px 15px;
+    max-width: 600px;
+}
+
+.dance-section-heading {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.dance-session-card {
+    background: rgba(30, 40, 50, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.dance-session-card:hover {
+    box-shadow: 0 0 12px rgba(41, 199, 255, 0.5);
+    transform: scale(1.05);
+}
+
+.dance-session-img-wrapper {
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-image: url('images/PLACEHOLDER.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.dance-badge-overlay {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #00b4d8;
+    color: #fff;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.dance-session-content {
+    padding: 15px;
+}
+
+.dance-session-date-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 4px;
+}
+
+.dance-session-date-row .dance-icon {
+    font-size: 14px;
+}
+
+.dance-session-date {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.dance-session-location {
+    color: #00b4d8;
+    font-size: 11px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.dance-session-desc {
+    font-size: 11px;
+    color: #d0d0d0;
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+
+.dance-btn-no-reg {
+    background: linear-gradient(90deg, #89c2d9, #468faf);
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 0;
+    width: 100%;
+    font-size: 11px;
+    font-weight: 700;
+    cursor: pointer;
+    text-align: center;
+}
+
+.dance-coaches-section {
+    background: rgba(20, 25, 30, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    padding: 15px;
+}
+
+.dance-coaches-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.dance-coaches-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.dance-coach-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.dance-coach-name {
+    background-color: #005f73;
+    color: #fff;
+    font-size: 9px;
+    font-weight: 600;
+    padding: 4px 15px;
+    border-radius: 12px;
+    text-align: center;
+}
+.dance-help-box {
+    background: #101d2c;
+    border-radius: 14px;
+    padding: 16px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.dance-help-title {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 13px;
+    margin-bottom: 6px;
+}
+
+.dance-help-text {
+    color: #8fa3af;
+    font-size: 11px;
+    line-height: 1.5;
+    margin-bottom: 14px;
+}
+
+.dance-message-btn {
+    background: #1c2c3d;
+    color: #ffffff;
+    border: 1px solid #3a5568;
+    border-radius: 20px;
+    padding: 10px 24px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.dance-message-btn:hover {
+    box-shadow: 0 0 12px rgba(41, 199, 255, 0.5);
+}
+}*/
+
+/*.Sports_grid-card {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
+
+}
+
+.Sports_sports-card-1 {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    max-height: fit-content;
+    background: linear-gradient(180deg, rgba(26, 54, 82, 0.6) 0%, rgba(13, 27, 42, 0.8) 100%);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 20px;
+    padding: 10px 20px;
+    width: 600px;
+    margin: 0 0 0 auto;
+}
+
+.Sports_sports-card-2 {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    max-height: 100%;
+    background: linear-gradient(180deg, rgba(26, 54, 82, 0.6) 0%, rgba(13, 27, 42, 0.8) 100%);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 20px;
+    padding: 10px 20px;
+    width: 600px;
+    margin: 0 auto 0 0;
+}
+
+.Sports_sports-card:hover {
+    border-color: rgba(0, 180, 216, 0.4);
+    box-shadow: 0 0 12px rgba(0, 180, 216, 0.2);
+}
+
+.Sports_card-title {
+    font-size: 20px;
+    margin: 10px 0;
+    background-color: rgba(255, 255, 255, 0.2);
+    width: fit-content;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+.Sports_sports-card img {
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgb(255, 255, 255, 0.12);
+    border-radius: 15px;
+}
+
+.Sports_price-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    width: fit-content;
+    text-align: center;
+    padding: 7px 13px;
+    border-radius: 15px;
+    margin: 10px 0;
+    font-weight: 700;
+}
+
+.Sports_price-container .Sports_price {
+    color: #00b4d8;
+}
+
+.Sports_date-container {
+    margin: 5px 0;
+    font-size: small;
+}
+
+.Sports_date-container i {
+    color: #00b4d8;
+}
+
+.Sports_event-title {
+    font-size: 25px;
+    margin: 5px 0;
+}
+
+.Sports_desc {
+    margin: 5px 0;
+    font-size: small;
+}
+
+.Sports_loc-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 5px 0;
+}
+
+.Sports_loc-container i {
+    color: #00b4d8;
+}
+
+.Sports_line-break {
+    background: rgba(255, 255, 255, 0.2);
+    height: 1px;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.Sports_lower-part {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    margin: 15px 0;
+}
+
+.Sports_entry-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.Sports_entry-container .Sports_entry {
+    color: #00b4d8;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.Sports_reg-btn {
+    background-color: #00b4d8;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 15px;
+    color: white;
+}
+
+.Sports_reg-btn:hover {
+    cursor: pointer;
+    box-shadow: 0 0 12px rgba(0, 180, 216, 0.2);
+}
+*/
